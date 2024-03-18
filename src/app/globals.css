@@ -7,7 +7,7 @@
     text-wrap: balance;
   }
   .section-title {
-    @apply text-lightLarge md:text-large xl:text-extraLarge text-center font-normal tracking-[0.5px];
+    @apply text-center text-lightLarge font-normal tracking-[0.5px] md:text-large xl:text-extraLarge;
   }
 
   .section-subtitle {
