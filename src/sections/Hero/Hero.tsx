@@ -1,4 +1,3 @@
-
 'use client';
 
 import Image from 'next/image';
@@ -18,12 +17,8 @@ export const Hero = () => {
           height={500}
           alt="Котик с ножичком))"
         />
-        <Button 
-          tag="a"
-          accent={true}
-          className='font-montserrat font-semibold'
-            >
-           {common.buttonsText.v1}
+        <Button tag="a" accent={true} className="font-montserrat font-semibold">
+          {common.buttonsText.v1}
         </Button>
         <Meeting />
       </div>
