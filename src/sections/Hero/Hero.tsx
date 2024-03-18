@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Meeting from '@/../public/icons/meeting.svg';
 
 export const Hero = () => {
   return (
@@ -12,6 +13,7 @@ export const Hero = () => {
           height={500}
           alt="Котик с ножичком))"
         />
+        <Meeting />
       </div>
     </section>
   );
