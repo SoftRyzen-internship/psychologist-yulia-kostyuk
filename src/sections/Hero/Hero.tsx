@@ -1,5 +1,10 @@
+
+'use client';
+
 import Image from 'next/image';
 import Meeting from '@/../public/icons/meeting.svg';
+import common from '@/data/common.json';
+import { Button } from '@/components/ui/TestUI/Button/Button';
 
 export const Hero = () => {
   return (
@@ -13,6 +18,13 @@ export const Hero = () => {
           height={500}
           alt="Котик с ножичком))"
         />
+        <Button 
+          tag="a"
+          accent={true}
+          className='font-montserrat font-semibold'
+            >
+           {common.buttonsText.v1}
+        </Button>
         <Meeting />
       </div>
     </section>
