@@ -29,7 +29,7 @@ const services = {
           type: 'object',
           fields: [
             {
-              name: 'street',
+              name: 'subtitle',
               type: 'string',
               title: 'Підзаголовок',
               validation: (Rule: any) =>
@@ -40,10 +40,12 @@ const services = {
         },
       ],
       validation: (Rule: any) =>
-        Rule.max(3).error('You can only add up to 3 cards.'),
+        Rule.min(3)
+          .error('You need at least 3 items')
+          .max(3)
+          .error('You can only add up to 3 items'),
     },
   ],
 };
 
-// commit
 export default services;
