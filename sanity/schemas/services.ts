@@ -2,59 +2,45 @@ const services = {
   name: 'services',
   title: 'Мої послуги',
   type: 'document',
-  // validation: (Rule: any) => [
-  //   Rule.required().error('This collection is required'),
-  //   Rule.custom((review: any) =>
-  //     review.length < 3 ? 'You need at least 3 reviews' : true,
-  //   ),
-  // ],
   fields: [
     {
       name: 'title',
       title: 'Назва послуги',
       type: 'string',
-      validation: (Rule: any) => [
-        Rule.required().error('This field is required'),
-        Rule.max(20).error('This field should be less than 30 characters'),
-      ],
+      validation: (Rule: any) =>
+        Rule.required()
+          .error('This field is required')
+          .max(20)
+          .error('This field should be less than 20 characters'),
     },
     {
       name: 'location',
       title: 'Локація',
       type: 'string',
-      validation: (Rule: any) => [
+      validation: (Rule: any) =>
         Rule.required().error('This field is required'),
-      ],
     },
     {
       name: 'card',
-      title: 'Опис картки',
-      type: 'object',
-      fields: [
+      title: 'Картa послуг',
+      type: 'array',
+      of: [
         {
-          name: 'subtitle',
-          title: 'Підзаголовок',
-          type: 'string',
-          validation: (Rule: any) => [
-            Rule.required().error('This field is required'),
-          ],
-        },
-        {
-          name: 'description',
-          title: 'Опис послуги',
-          type: 'array',
-          of: [
+          type: 'object',
+          fields: [
             {
-              type: 'text',
-              name: 'subtitle',
+              name: 'street',
+              type: 'string',
               title: 'Підзаголовок',
-              validation: (Rule: any) => [
+              validation: (Rule: any) =>
                 Rule.required().error('This field is required'),
-              ],
             },
+            { name: 'description', type: 'text', title: 'Опис послуги' },
           ],
         },
       ],
+      validation: (Rule: any) =>
+        Rule.max(3).error('You can only add up to 3 cards.'),
     },
   ],
 };
