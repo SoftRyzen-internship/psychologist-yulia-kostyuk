@@ -1,7 +1,10 @@
-'use client'; //BurgerMenu emulation
+'use client';
+import { Hero } from '@/sections/Hero';
+import { Button } from '@/components/ui/Button';
+import common from '@/data/common.json';
+
 import { useState } from 'react'; //BurgerMenu emulation
 import Image from 'next/image'; //BurgerMenu emulation
-import { Hero } from '@/sections/Hero';
 import { BurgerMenu } from '@/components/ui/BurgerMenu/BurgerMenu'; //BurgerMenu emulation
 
 export default function Home() {
@@ -20,6 +23,15 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <Button tag="a" accent={true} className="font-semibold">
+        {common.buttonsText.v1}
+      </Button>
+      <Button tag="a" accent={false} className="font-normal">
+        {common.buttonsText.v2}
+      </Button>
+      <Button tag="a" accent={false} className="font-normal">
+        {common.buttonsText.v1}
+      </Button>
       <button type="button" onClick={handleOpen}>
         <Image
           src="/icons/burger-menu.svg"
