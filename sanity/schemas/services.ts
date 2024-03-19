@@ -35,7 +35,12 @@ const services = {
               validation: (Rule: any) =>
                 Rule.required().error('This field is required'),
             },
-            { name: 'description', type: 'text', title: 'Опис послуги' },
+            {
+              name: 'description',
+              title: 'Опис послуги',
+              type: 'array',
+              of: [{ type: 'block' }],
+            },
           ],
         },
       ],
