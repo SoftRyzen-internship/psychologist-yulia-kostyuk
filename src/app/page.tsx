@@ -16,7 +16,14 @@ export default function Home() {
 
   return (
     <>
-      <Navbar variant="header" />
+      <div className="container relative flex items-center">
+        <Logo
+          path="header"
+          onClick={onLogoClick}
+          stylesLogo="mr-[90px] xl:ml-[102px]"
+        />
+        <Navbar variant="header" />
+      </div>
       <Hero />
       <Services />
       <Button tag="a" accent={true} className="font-semibold">

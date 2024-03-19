@@ -11,15 +11,15 @@ export const NavbarLink: React.FC<NavbarLinkProps> = ({
   onClick,
 }) => {
   const navlinkClasses = classNames(
-    'cursor-pointer text-accent hover:text-text focus:text-text transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)]',
+    'cursor-pointer text-text hover:text-accent focus:text-accent transition-all duration-300 ease-out',
     {
-      'hover:text-text focus:text-text': variant === 'mobile-menu',
+      'hover:text-accent focus:text-accent': variant === 'mobile-menu',
     },
   );
 
   return (
     <li onClick={onClick} className={navlinkClasses}>
-      <a href={href} onClick={e => href} aria-label={title}>
+      <a href={href} onClick={e => href}>
         {title}
       </a>
     </li>
