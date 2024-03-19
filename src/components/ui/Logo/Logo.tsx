@@ -6,7 +6,7 @@ import { LogoProps } from './types';
 export const Logo: React.FC<LogoProps> = ({ path, onClick }) => {
   const imgSizes =
     path === 'header'
-      ? 'w-[167px] h-[28px] xl:w-[215] xl:h-[32px]'
+      ? 'w-[167px] h-[28px] xl:w-[215px] xl:h-[32px]'
       : 'w-[164px] h-[28px]';
 
   return (
