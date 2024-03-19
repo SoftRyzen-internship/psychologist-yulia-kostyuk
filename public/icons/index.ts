@@ -3,6 +3,7 @@ import ArrowDownIcon from './arrow-down.svg';
 import ArrowRightIcon from './arrow-right.svg';
 import ArrowWhiteIcon from './arrow-white.svg';
 import BurgerMenuIcon from './burger-menu.svg';
+import CloseIcon from './close-icon.svg';
 import ConversationIcon from './conversation.svg';
 import FacebookIcon from './facebook.svg';
 import FlowerIcon from './flower.svg';
@@ -20,7 +21,8 @@ ArrowDownIcon,
 ArrowRightIcon,
 ArrowWhiteIcon,
 BurgerMenuIcon,
-ConversationIcon,
+    ConversationIcon,
+CloseIcon,
 FacebookIcon,
 FlowerIcon,
 GoItIcon,
