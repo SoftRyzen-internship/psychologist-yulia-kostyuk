@@ -1,5 +1,6 @@
 'use client';
 
+import { Navbar } from '@/components/ui/Navbar';
 import { Hero } from '@/sections/Hero';
 import { Button } from '@/components/ui/Button';
 import common from '@/data/common.json';
@@ -7,6 +8,7 @@ import common from '@/data/common.json';
 export default function Home() {
   return (
     <>
+      <Navbar variant='header'/>
       <Hero />
       <Button tag="a" accent={true} className="font-semibold">
         {common.buttonsText.v1}
