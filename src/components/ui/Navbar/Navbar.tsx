@@ -15,7 +15,7 @@ export const Navbar: React.FC<NavbarProps> = ({
       'text-accent font-montserrat text-center text-sm flex-col gap-6 xl:hidden':
         variant === 'mobile-menu',
       'text-accent font-montserrat text-base gap-10 flex-row smOnly:hidden':
-        variant === 'header'
+        variant === 'header',
     },
     className,
   );
@@ -29,7 +29,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           href={link.href}
           variant={variant}
           onClick={onClick}
-        /> 
+        />
       ))}
     </ul>
   );

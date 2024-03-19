@@ -8,7 +8,7 @@ import common from '@/data/common.json';
 export default function Home() {
   return (
     <>
-      <Navbar variant='header'/>
+      <Navbar variant="header" />
       <Hero />
       <Button tag="a" accent={true} className="font-semibold">
         {common.buttonsText.v1}
