@@ -1,3 +1,27 @@
 {
-  "title": "The Big Cat"
+  "title": "The Big Cat",
+  "layout": {
+    "logo": {
+      "label": "Юлія Костюк",
+      "ariaLabel": "Посилання на головну стороніку"
+    }
+  },
+
+  "socials": {
+    "telegram": {
+      "path": "https://t.me/kostiuk_ulia",
+      "ariaLabelIcon": "іконка телеграм",
+      "ariaLabelLink": "посилання на телеграм"
+    },
+    "instagram": {
+      "path": "https://www.instagram.com/kostiuk_ulia_psy/",
+      "ariaLabelIcon": "іконка інстаграм",
+      "ariaLabelLink": "посилання на інстаграм"
+    },
+    "facebook": {
+      "path": "https://www.facebook.com/profile.php?id=61553456342276",
+      "ariaLabelIcon": "іконка фейсбук",
+      "ariaLabelLink": "посилання на фейсбук"
+    }
+  }
 }

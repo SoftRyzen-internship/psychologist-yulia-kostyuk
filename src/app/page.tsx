@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Logo path="header" onClick={onLogoClick} />
+      <Logo path="footer" onClick={onLogoClick} />
       <Socials />
     </>
   );

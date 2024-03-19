@@ -2,37 +2,52 @@ import Telegram from '@/../public/icons/telegram.svg';
 import Instagram from '@/../public/icons/instagram.svg';
 import Facebook from '@/../public/icons/facebook.svg';
 
+import data from '@/data/common.json';
+
 export const Socials = () => {
+  const { socials } = data;
   return (
     <ul className="flex gap-4 text-accent">
       <li>
         <a
-          href="https://t.me/kostiuk_ulia"
+          href={socials.telegram.path}
+          aria-label={socials.telegram.ariaLabelLink}
           target="_blank"
           rel="noopener noreferrer nofollow"
-          className="hover:text-hover focus-visible:text-pressed"
+          className="hover:text-hover hover:transition-all focus-visible:text-pressed"
         >
-          <Telegram className="h-8 w-8" />
+          <Telegram
+            className="h-8 w-8"
+            aria-label={socials.telegram.ariaLabelIcon}
+          />
         </a>
       </li>
       <li>
         <a
-          href="https://www.instagram.com/kostiuk_ulia_psy/"
+          href={socials.instagram.path}
+          aria-label={socials.instagram.ariaLabelLink}
           target="_blank"
           rel="noopener noreferrer nofollow"
-          className="hover:text-hover focus-visible:text-pressed"
+          className="hover:text-hover hover:transition-all focus-visible:text-pressed"
         >
-          <Instagram className="h-8 w-8" />
+          <Instagram
+            className="h-8 w-8"
+            aria-label={socials.instagram.ariaLabelIcon}
+          />
         </a>
       </li>
       <li>
         <a
-          href="https://www.facebook.com/profile.php?id=61553456342276"
+          href={socials.facebook.path}
+          aria-label={socials.facebook.ariaLabelLink}
           target="_blank"
           rel="noopener noreferrer nofollow"
-          className="hover:text-hover focus-visible:text-pressed"
+          className="hover:text-hover hover:transition-all focus-visible:text-pressed"
         >
-          <Facebook className="h-8 w-8" />
+          <Facebook
+            className="h-8 w-8"
+            aria-label={socials.facebook.ariaLabelIcon}
+          />
         </a>
       </li>
     </ul>

@@ -1,24 +1,24 @@
-import Image from 'next/image';
 import Link from 'next/link';
 
 import { LogoProps } from './types';
 
+import data from '@/data/common.json';
+
 export const Logo: React.FC<LogoProps> = ({ path, onClick }) => {
+  const { logo } = data.layout;
   const imgSizes =
     path === 'header'
-      ? 'w-[167px] h-[28px] xl:w-[215px] xl:h-[32px]'
-      : 'w-[164px] h-[28px]';
+      ? 'text-2xl leading-7 tracking-[0.5px] xl:text-[32px] xl:leading-8'
+      : 'text-2xl leading-7 tracking-[0.2px]';
 
   return (
-    <Link href="/" aria-label="logo" onClick={onClick} className="inline-block">
-      <Image
-        src={'/images/logo.webp'}
-        alt="logo"
-        width={164}
-        height={28}
-        priority
-        className={imgSizes}
-      />
+    <Link
+      href="/"
+      aria-label={logo.ariaLabel}
+      onClick={onClick}
+      className={`font-italic inline-block font-tenor font-normal text-accent hover:text-hover hover:transition-all focus-visible:text-pressed ${imgSizes}`}
+    >
+      {logo.label}
     </Link>
   );
 };

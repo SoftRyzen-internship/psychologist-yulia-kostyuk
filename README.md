@@ -110,3 +110,10 @@ is a list of more common components and their API.
 ```
 
 ```
+
+- #### component Logo
+
+| Prop      | Default | Description                                     |
+| --------- | ------- | ----------------------------------------------- |
+| `path`    | --      | required, `string`. choose 'header' or 'footer' |
+| `onClick` | --      | required, `() => void`                          |
