@@ -13,13 +13,15 @@ export const Button: React.FC<ButtonProps> = ({
   className,
 }) => {
   const btnStyles = classNames(
-    'cursor-pointer block text-center w-full text-white',
+    'cursor-pointer font-montserrat inline-block text-center',
     {
-      'py-4 px-12 max-w-80 bg-accent xl:max-w-[198px]': accent === true,
-      'hover:bg-hover focus:bg-hover active:bg-pressed': accent === true,
-      'py-3 px-6 max-w-80 bg-transparent border-solid border-accent xl:max-w-[187px]':
+      'py-4 px-12 max-w-80 bg-accent text-white xl:max-w-[198px]': 
+      accent === true,
+      'hover:bg-hover focus:bg-hover active:bg-pressed': 
+      accent === true,
+      'py-3 px-6 max-w-80 bg-transparent text-accent border border-solid border-accent xl:max-w-[187px]':
         accent === false,
-      'hover:bg-hsla(0, 0%, 16%, 0.04) focus:bg-hsla(0, 0%, 16%, 0.04) active:bg-hsla(0, 0%, 16%, 0.08)':
+      'hover:bg-[rgba(41,41,41,0.04)] focus:bg-[41, 41, 41, 0.04] active:bg-[rgba(41,41,41,0.08)]':
         accent === false,
     },
     className,
