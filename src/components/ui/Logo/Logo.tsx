@@ -10,7 +10,7 @@ export const Logo: React.FC<LogoProps> = ({ path, onClick }) => {
       : 'w-[164px] h-[28px]';
 
   return (
-    <Link href="/" aria-label="logo" onClick={onClick}>
+    <Link href="/" aria-label="logo" onClick={onClick} className="inline-block">
       <Image
         src={'/images/logo.webp'}
         alt="logo"
