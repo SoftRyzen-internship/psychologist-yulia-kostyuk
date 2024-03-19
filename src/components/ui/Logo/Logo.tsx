@@ -4,7 +4,7 @@ import { LogoProps } from './types';
 
 import data from '@/data/common.json';
 
-export const Logo: React.FC<LogoProps> = ({ path, onClick }) => {
+export const Logo: React.FC<LogoProps> = ({ path, onClick, stylesLogo }) => {
   const { logo } = data.layout;
   const imgSizes =
     path === 'header'
@@ -16,7 +16,7 @@ export const Logo: React.FC<LogoProps> = ({ path, onClick }) => {
       href="/"
       aria-label={logo.ariaLabel}
       onClick={onClick}
-      className={`font-italic inline-block font-tenor font-normal text-accent hover:text-hover hover:transition-all focus-visible:text-pressed ${imgSizes}`}
+      className={`font-italic inline-block font-tenor font-normal text-accent hover:text-hover hover:transition-all focus-visible:text-pressed ${stylesLogo}  ${imgSizes}`}
     >
       {logo.label}
     </Link>

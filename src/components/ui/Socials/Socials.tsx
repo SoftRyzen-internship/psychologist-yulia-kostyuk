@@ -2,12 +2,14 @@ import Telegram from '@/../public/icons/telegram.svg';
 import Instagram from '@/../public/icons/instagram.svg';
 import Facebook from '@/../public/icons/facebook.svg';
 
+import { SocialsProps } from './types';
+
 import data from '@/data/common.json';
 
-export const Socials = () => {
+export const Socials: React.FC<SocialsProps> = ({ stylesSocials }) => {
   const { socials } = data;
   return (
-    <ul className="flex gap-4 text-accent">
+    <ul className={`flex gap-4 text-accent ${stylesSocials}`}>
       <li>
         <a
           href={socials.telegram.path}
