@@ -11,7 +11,7 @@ export const NavbarLink: React.FC<NavbarLinkProps> = ({
   onClick,
 }) => {
   const navlinkClasses = classnames(
-    'cursor-pointer text-text hover:text-accent focus:text-accent transition-all duration-300 ease-out',
+    'cursor-pointer text-text hover:text-accent focus:text-accent transition',
     {
       'hover:text-accent focus:text-accent': variant === 'mobile-menu',
     },
