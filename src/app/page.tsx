@@ -6,7 +6,8 @@ import { Socials } from '@/components/ui/Socials';
 import { Logo } from '@/components/ui/Logo';
 
 import common from '@/data/common.json';
-import Services from '@/components/common/Services/Services';
+// import Services from '@/components/common/Services/Services';
+import { Conditions } from '@/components/common/Conditions';
 
 export default function Home() {
   const onLogoClick = () => {
@@ -16,7 +17,8 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Services />
+      {/* <Services /> */}
+      <Conditions />
       <Button tag="a" accent={true} className="font-semibold">
         {common.buttonsText.v1}
       </Button>
