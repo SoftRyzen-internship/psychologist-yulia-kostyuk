@@ -124,3 +124,37 @@ is a list of more common components and their API.
 | Prop            | Default | Description                                              |
 | --------------- | ------- | -------------------------------------------------------- |
 | `stylesSocials` | --      | optional, `string`, adds custom css class to the Socials |
+
+- #### component Button
+
+| Prop         | Default     | Description                                                                           |
+| ------------ | ----------- | ------------------------------------------------------------------------------------- |
+| `tag`        | --          | required, `string`, it can be either an 'a' or a 'button'.                            |
+| `accent`     | --          | required, `boolean`, indicates whether the button should have an accent style or not. |
+| `children`   | --          | required, `ReactNode`                                                                 |
+| `href`       | `undefined` | optional, `string`, specifies the URL of the link.                                    |
+| `buttonType` | `button`    | optional, `string`, specifies the type of button.                                     |
+| `onClick`    | `undefined` | required, `() => void`, function is called when the button is clicked.                |
+| `disabled`   | `false`     | optional, `string`, if 'true', the button is disabled and cannot be clicked.          |
+| `classname`  | `undefined` | optional, `string`, adds custom css class to the Button component.                    |
+
+- #### component Navbar
+
+| Prop        | Default     | Description                                                          |
+| ----------- | ----------- | -------------------------------------------------------------------- |
+| `variant`   | --          | required, `string`, it can be either 'header' or 'mobile-menu'.      |
+| `className` | `undefined` | optional, `string`, adds custom CSS classes to the Navbar component. |
+| `onclick`   | `undefined` | optional, `() => void`, function is called when                      |
+
+the Navbar is clicked.
+
+- #### component NavbarLink
+
+| Prop      | Default     | Description                                                  |
+| --------- | ----------- | ------------------------------------------------------------ |
+| `title`   | --          | required, `string`, specifies the title of the NavbarLink.   |
+| `href`    | --          | optional, `string`, specifies the URL of the link.           |
+| `variant` | --          | required, `string`, specifies the variant of the NavbarLink. |
+| `onclick` | `undefined` | optional, `() => void`, function is called when              |
+
+the NavbarLink is clicked.

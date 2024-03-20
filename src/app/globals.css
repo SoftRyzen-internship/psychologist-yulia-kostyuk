@@ -25,4 +25,8 @@
   .info {
     @apply text-sm leading-4 tracking-[0.2px];
   }
+
+  .transition {
+    @apply transition-all duration-300 ease-out;
+  }
 }
