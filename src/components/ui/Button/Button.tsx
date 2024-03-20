@@ -1,5 +1,5 @@
 import React from 'react';
-import classNames from 'classnames';
+import { classnames } from '@/utils/classnames';
 import { ButtonProps } from './types';
 
 export const Button: React.FC<ButtonProps> = ({
@@ -12,7 +12,7 @@ export const Button: React.FC<ButtonProps> = ({
   disabled = false,
   className,
 }) => {
-  const btnStyles = classNames(
+  const btnStyles = classnames(
     'cursor-pointer font-montserrat inline-block text-center',
     {
       'py-4 px-12 max-w-80 bg-accent text-white transition-all duration-300 ease-out xl:max-w-[198px]':
