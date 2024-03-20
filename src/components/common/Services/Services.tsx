@@ -1,24 +1,9 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { getServices } from '../../../../sanity/request/servicesRequest';
-
-type Service = {
-  _id: string;
-  title: string;
-  location: string;
-  card: Cards[];
-};
-
-type Cards = {
-  _key: string;
-  subtitle: string;
-  description?: {
-    children: {
-      text: string;
-    }[];
-  }[];
-};
+import { getServices } from '@/../sanity/request/servicesRequest';
+import { Service } from './types';
+import ServiceItem from './ServicesItem';
 
 export default function Services() {
   const [services, setServices] = useState<Service[]>([]);
@@ -26,12 +11,6 @@ export default function Services() {
   useEffect(() => {
     const fetchData = async () => {
       const servicesData = await getServices();
-      // console.log(servicesData);
-      // console.log(servicesData[0].location);
-      // console.log(servicesData[0].card[0]);
-      // console.log(servicesData[0].card[0].subtitle);
-      // console.log(servicesData[0].card[0].description[0].children[0].text);
-
       setServices(servicesData);
     };
 
@@ -48,16 +27,7 @@ export default function Services() {
             <h3>{service.location}</h3>
             <ul>
               {service.card.map((card, index) => (
-                <li key={index}>
-                  <h4>{card.subtitle}</h4>
-                  {card.description && (
-                    <p>
-                      {card.description.map((desc, idx) => (
-                        <span key={idx}>{desc.children[0].text}</span>
-                      ))}
-                    </p>
-                  )}
-                </li>
+                <ServiceItem key={index} card={card} />
               ))}
             </ul>
           </div>
