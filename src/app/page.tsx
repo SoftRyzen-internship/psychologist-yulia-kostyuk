@@ -1,5 +1,6 @@
 'use client';
 
+import { Navbar } from '@/components/ui/Navbar';
 import { Hero } from '@/sections/Hero';
 import { Button } from '@/components/ui/Button';
 import { Socials } from '@/components/ui/Socials';
@@ -15,6 +16,14 @@ export default function Home() {
 
   return (
     <>
+      <div className="container relative flex items-center">
+        <Logo
+          path="header"
+          onClick={onLogoClick}
+          stylesLogo="mr-[90px] xl:ml-[102px]"
+        />
+        <Navbar variant="header" />
+      </div>
       <Hero />
       <Services />
       <Button tag="a" accent={true} className="font-semibold">
