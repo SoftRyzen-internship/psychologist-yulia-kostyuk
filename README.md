@@ -124,3 +124,9 @@ is a list of more common components and their API.
 | Prop            | Default | Description                                              |
 | --------------- | ------- | -------------------------------------------------------- |
 | `stylesSocials` | --      | optional, `string`, adds custom css class to the Socials |
+
+- #### component BurgerMenu
+
+| Prop      | Default | Description                                                   |
+| --------- | ------- | ------------------------------------------------------------- |
+| `onClose` | --      | required, `() => void`, add the function of closing the modal |
