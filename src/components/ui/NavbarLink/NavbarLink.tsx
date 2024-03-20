@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import classNames from 'classnames';
+import { classnames } from '@/utils/classnames';
 import { NavbarLinkProps } from '@/components/ui/NavbarLink/types';
 
 export const NavbarLink: React.FC<NavbarLinkProps> = ({
@@ -10,8 +10,8 @@ export const NavbarLink: React.FC<NavbarLinkProps> = ({
   variant,
   onClick,
 }) => {
-  const navlinkClasses = classNames(
-    'cursor-pointer text-text hover:text-accent focus:text-accent transition-all duration-300 ease-out',
+  const navlinkClasses = classnames(
+    'cursor-pointer text-text hover:text-accent focus:text-accent transition',
     {
       'hover:text-accent focus:text-accent': variant === 'mobile-menu',
     },

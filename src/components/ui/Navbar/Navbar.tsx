@@ -1,5 +1,5 @@
 import React from 'react';
-import classNames from 'classnames';
+import { classnames } from '@/utils/classnames';
 import { navLinks } from '@/data/header';
 import { NavbarLink } from '../NavbarLink';
 import { NavbarProps } from '@/components/ui/Navbar/types';
@@ -9,12 +9,12 @@ export const Navbar: React.FC<NavbarProps> = ({
   onClick,
   className,
 }) => {
-  const NavbarClasses = classNames(
+  const NavbarClasses = classnames(
     'flex',
     {
       'text-text font-montserrat text-center text-sm tracking-[0.2px] flex-col gap-6 xl:hidden':
         variant === 'mobile-menu',
-      'text-text font-montserrat text-base tracking-[0.2px] mt-2 gap-10 flex-row mdOnly:hidden':
+      'text-text font-montserrat text-base tracking-[0.2px] mt-2 gap-10 flex-row smOnly:hidden mdOnly:hidden':
         variant === 'header',
     },
     className,
