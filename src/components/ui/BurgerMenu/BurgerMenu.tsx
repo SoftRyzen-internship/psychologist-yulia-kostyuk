@@ -20,8 +20,8 @@ export default function BurgerMenu({ onClose }: IBurgerMenuProps) {
   return (
     <>
       <div className="bg-backdrop and fixed bottom-0 right-0 z-10 h-full w-full overscroll-none backdrop-blur-xl xl:hidden">
-        <div className="mx-auto flex h-lvh w-full flex-col bg-mainBcg pb-12 pl-5 pr-[25px] pt-[22px] md:pl-8">
-          <div className="mb-[52px] flex justify-between">
+        <div className="mx-auto flex h-lvh w-full flex-col bg-mainBcg">
+          <div className="mb-[52px] flex justify-between px-5 py-[22px] md:pl-8">
             <Logo path="header" onClick={onClose} />
             <button
               aria-label="menu button close"
