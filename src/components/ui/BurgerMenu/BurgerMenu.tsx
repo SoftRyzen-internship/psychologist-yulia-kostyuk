@@ -1,12 +1,12 @@
 'use client';
 import { useEffect } from 'react';
-import Image from 'next/image';
 import { Logo } from '../Logo';
 import { Socials } from '../Socials';
+import { Navbar } from '../Navbar';
+import { CloseIcon } from '@/../public/icons';
 import { IBurgerMenuProps } from './types';
-import menuItems from '../../../data/header.json';
 
-export default function BurgerMenu({ isOpen, onClose }: IBurgerMenuProps) {
+export default function BurgerMenu({ onClose }: IBurgerMenuProps) {
   useEffect(() => {
     const close = (e: { keyCode: number }) => {
       if (e.keyCode === 27) {
@@ -20,7 +20,7 @@ export default function BurgerMenu({ isOpen, onClose }: IBurgerMenuProps) {
   return (
     <>
       <div className="bg-backdrop and fixed bottom-0 right-0 z-10 h-full w-full overscroll-none backdrop-blur-xl xl:hidden">
-        <div className="relative mx-auto h-lvh w-full  bg-mainBcg pb-12 pl-5 pr-[25px] pt-[22px] md:pl-8">
+        <div className="mx-auto flex h-lvh w-full flex-col bg-mainBcg pb-12 pl-5 pr-[25px] pt-[22px] md:pl-8">
           <div className="mb-[52px] flex justify-between">
             <Logo path="header" onClick={onClose} />
             <button
@@ -28,25 +28,13 @@ export default function BurgerMenu({ isOpen, onClose }: IBurgerMenuProps) {
               onClick={onClose}
               className="duration-250 transform transition hover:scale-110"
             >
-              <Image
-                src="/icons/close-icon.svg"
-                alt="menu open button"
-                priority={true}
-                width={14}
-                height={14}
-              />
+              <CloseIcon width={14} height={14} />
             </button>
           </div>
-          <nav className=" ml-3  md:ml-0">
-            <ul>
-              {menuItems.map(({ id, text }) => (
-                <li key={id} className="mb-6 last:mb-0">
-                  {text}
-                </li>
-              ))}
-            </ul>
+          <nav className="mb-auto  ml-3 self-start md:ml-0">
+            <Navbar variant="mobile-menu" />
           </nav>
-          <div className=" absolute bottom-12 left-auto right-auto">
+          <div className="self-center md:self-start">
             <Socials />
           </div>
         </div>

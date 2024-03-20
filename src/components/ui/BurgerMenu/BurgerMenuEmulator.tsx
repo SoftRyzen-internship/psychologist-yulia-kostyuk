@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react'; //BurgerMenu emulation
-import Image from 'next/image'; //BurgerMenu emulation
+import { BurgerMenuIcon } from '@/../public/icons';
 import BurgerMenu from './BurgerMenu';
 
 export default function BurgerMenuEmulator() {
@@ -20,15 +20,9 @@ export default function BurgerMenuEmulator() {
   return (
     <>
       <button type="button" onClick={handleOpen}>
-        <Image
-          src="/icons/burger-menu.svg"
-          alt="menu open button"
-          priority={true}
-          width={20}
-          height={20}
-        />
+        <BurgerMenuIcon />
       </button>
-      {isOpen && <BurgerMenu isOpen={isOpen} onClose={handleClose} />}
+      {isOpen && <BurgerMenu onClose={handleClose} />}
     </>
   );
 }
