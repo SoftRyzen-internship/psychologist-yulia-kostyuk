@@ -21,7 +21,7 @@ export const Conditions = () => {
   }, []);
 
   return (
-    <div className="container font-montserrat text-[14px] font-normal not-italic leading-5 tracking-[0.2px] text-text xl:text-[16px] xl:leading-6">
+    <div className="prose container font-montserrat text-[14px] font-normal not-italic leading-5 tracking-[0.2px] text-text xl:text-[16px] xl:leading-6">
       {conditions.map((condition, index) => (
         <PortableText key={index} value={condition.description} />
       ))}
