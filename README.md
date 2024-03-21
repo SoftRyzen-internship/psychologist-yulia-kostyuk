@@ -161,7 +161,8 @@ the NavbarLink is clicked.
 
 - #### component BurgerMenu
 
-| Prop        | Default     | Description                                                                         |
-| ----------- | ----------- | ----------------------------------------------------------------------------------- |
+| Prop Description | Default |     |     | ----------- | ----------- |
+| ---------------- | ------- | --- | --- | ----------- | ----------- |
 
-| `onClose`   | `undefined` | optional, `() => void`, function is called when the icon is clicked.
+| `onClose` | `undefined` | optional, `() => void`, function is called when the
+icon is clicked.
