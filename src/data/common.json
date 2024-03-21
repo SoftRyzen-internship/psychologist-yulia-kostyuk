@@ -2,7 +2,7 @@
   "layout": {
     "logo": {
       "label": "Юлія Костюк",
-      "ariaLabel": "Посилання на головну стороніку"
+      "ariaLabel": "Посилання на головну сторінку"
     }
   },
 
@@ -12,21 +12,21 @@
     "v3": "Відправити"
   },
 
-  "socials": {
-    "telegram": {
+  "socials": [
+    {
+      "id": 1,
       "path": "https://t.me/kostiuk_ulia",
-      "ariaLabelIcon": "іконка телеграм",
-      "ariaLabelLink": "посилання на телеграм"
+      "ariaLabel": "посилання на телеграм"
     },
-    "instagram": {
+    {
+      "id": 2,
       "path": "https://www.instagram.com/kostiuk_ulia_psy/",
-      "ariaLabelIcon": "іконка інстаграм",
-      "ariaLabelLink": "посилання на інстаграм"
+      "ariaLabel": "посилання на інстаграм"
     },
-    "facebook": {
+    {
+      "id": 3,
       "path": "https://www.facebook.com/profile.php?id=61553456342276",
-      "ariaLabelIcon": "іконка фейсбук",
-      "ariaLabelLink": "посилання на фейсбук"
+      "ariaLabel": "посилання на фейсбук"
     }
-  }
+  ]
 }

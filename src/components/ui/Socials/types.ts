@@ -1,3 +1,3 @@
 export type SocialsProps = {
-  stylesSocials?: string;
+  className?: string;
 };
