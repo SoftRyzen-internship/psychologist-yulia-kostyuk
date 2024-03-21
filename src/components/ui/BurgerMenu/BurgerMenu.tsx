@@ -8,17 +8,23 @@ import { IBurgerMenuProps } from './types';
 
 export const BurgerMenu: React.FC<IBurgerMenuProps> = ({ onClose }) => {
   useEffect(() => {
-    const close = (e: { keyCode: number }) => {
-      if (e.keyCode === 27) {
-        onClose();
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        onClose(); 
       }
     };
-    window.addEventListener('keydown', close);
-    return () => window.removeEventListener('keydown', close);
-  }, [onClose]);
+
+    window.addEventListener('keydown', handleKeyDown); 
+       return () => {
+         window.removeEventListener('keydown', handleKeyDown); 
+       };
+     }, [onClose]); 
+
+  const handleLinkClick = () => {
+    onClose(); 
+  };
 
   return (
-    <>
       <div className="bg-backdrop and fixed bottom-0 right-0 z-10 h-full w-full overscroll-none backdrop-blur-xl xl:hidden">
         <div className="mx-auto flex h-lvh w-full flex-col  bg-mainBcg">
           <div className="flex justify-between px-5 py-[22px] md:px-8 md:py-[26px]">
@@ -33,7 +39,7 @@ export const BurgerMenu: React.FC<IBurgerMenuProps> = ({ onClose }) => {
           </div>
           <div className=" flex h-full flex-col justify-between px-8 py-10 md:py-[60px]">
             <nav className="mb-auto self-start">
-              <Navbar variant="mobile-menu" />
+              <Navbar variant="mobile-menu" onClick={handleLinkClick}/>
             </nav>
             <div className="self-center md:self-start">
               <Socials />
@@ -41,6 +47,5 @@ export const BurgerMenu: React.FC<IBurgerMenuProps> = ({ onClose }) => {
           </div>
         </div>
       </div>
-    </>
   );
 };

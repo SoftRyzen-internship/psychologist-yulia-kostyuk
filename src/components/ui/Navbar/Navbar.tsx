@@ -12,9 +12,9 @@ export const Navbar: React.FC<NavbarProps> = ({
   const NavbarClasses = classnames(
     'flex',
     {
-      'text-text font-montserrat text-sm tracking-[0.2px] flex-col gap-6':
+      'text-text font-montserrat text-sm flex-col gap-6':
         variant === 'mobile-menu',
-      'text-text font-montserrat text-base tracking-[0.2px] ml-[90px] mt-2 gap-10 smOnly:hidden mdOnly:hidden':
+      'text-text font-montserrat text-base gap-10 smOnly:hidden mdOnly:hidden':
         variant === 'header',
     },
     className,

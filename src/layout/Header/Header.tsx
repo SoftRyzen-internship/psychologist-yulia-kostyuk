@@ -24,17 +24,20 @@ export const Header = () => {
 
   return (
     <header className="w-full">
-      <div className="container relative mt-[14px] flex items-center">
-        <Logo path="header" onClick={onLogoClick} />
-        <Navbar variant="header" />
-        <button
-          type="button"
-          className="ml-auto block xl:hidden"
-          onClick={handleOpen}
-        >
-          <BurgerMenuIcon />
-        </button>
-        {isOpen && <BurgerMenu onClose={handleClose} />}
+      <div className="container">
+        <div className="relative flex items-end gap-24 pt-3.5">
+          <Logo path="header" onClick={onLogoClick} />
+          <Navbar variant="header" />
+          <button
+            aria-label="burger menu"
+            type="button"
+            className="ml-auto block xl:hidden"
+            onClick={handleOpen}
+          >
+            <BurgerMenuIcon />
+          </button>
+          {isOpen && <BurgerMenu onClose={handleClose} />}
+        </div>
       </div>
     </header>
   );
