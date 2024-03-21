@@ -103,11 +103,11 @@ export function ModalTestComponent() {
       <button className="mr-5 bg-accent" onClick={() => handleOpen('success')}>
         SUCCESS
       </button>
-      <button className="mr-5 bg-accent" onClick={() => handleOpen('error')}>
+      <button className="mr-5 bg-error" onClick={() => handleOpen('error')}>
         ERROR
       </button>
       <button
-        className="mr-5 bg-accent"
+        className="mr-5 bg-[#E6E1D5] "
         onClick={() => handleOpen('conditions')}
       >
         CONDITIONS

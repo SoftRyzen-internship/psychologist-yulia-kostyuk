@@ -40,6 +40,7 @@ export default function Home() {
       <BurgerMenuEmulator />
       <Logo path="footer" onClick={onLogoClick} className="ml-7" />
       <Socials className="mt-5" />
+      <ModalTestComponent />
     </>
   );
 }
