@@ -6,4 +6,27 @@
   .text-balance {
     text-wrap: balance;
   }
+  .section-title {
+    @apply text-center text-lightLarge font-normal tracking-[0.5px] md:text-large xl:text-extraLarge;
+  }
+
+  .section-subtitle {
+    @apply text-2xl font-normal leading-8 tracking-[0.5px] md:text-medium xl:text-large xl:leading-[1.2] xl:tracking-[0.2px];
+  }
+
+  .text {
+    @apply text-sm leading-5 tracking-[0.2px] xl:text-base xl:leading-6;
+  }
+
+  .caption {
+    @apply text-xl leading-7 tracking-[0.5px] xl:text-2xl;
+  }
+
+  .info {
+    @apply text-sm leading-4 tracking-[0.2px];
+  }
+
+  .transition {
+    @apply transition-all duration-300 ease-out;
+  }
 }

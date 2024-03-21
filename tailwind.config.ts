@@ -32,11 +32,31 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      content: {
+        arrow: `url(/icons/arrow-right.svg)`,
+      },
+      fontFamily: {
+        montserrat: ['var(--font-montserrat)'],
+        tenor: ['var(--font-tenor)'],
+      },
+      fontSize: {
+        medium: ['28px', '1.28'],
+        lightLarge: ['32px', '1.25'],
+        large: ['40px', '1.2'],
+        extraLarge: ['56px', '1.07'],
+      },
       colors: {
+        mainBcg: '#E5E1D5',
+        footerBcg: '#D6D0C5',
+        cardBcg: '#FAF5ED',
         accent: '#395734',
+        text: '#292929',
+        error: '#CB3D3D',
+        hover: '#2C4228',
+        pressed: '#21331F',
       },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 };
 export default config;
