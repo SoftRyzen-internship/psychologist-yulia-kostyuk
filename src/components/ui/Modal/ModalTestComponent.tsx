@@ -64,28 +64,63 @@ const Policies = () => {
 };
 
 export function ModalTestComponent() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isSuccessOpen, setIsSuccessOpen] = useState(false);
+  const [isErrorOpen, setIsErrorOpen] = useState(false);
+  const [isConditionsOpen, setIsConditionsOpen] = useState(false);
 
-  const handleOpen = () => {
-    setIsOpen(true);
+  const handleOpen = (type: 'conditions' | 'success' | 'error') => {
     document.body.style.overflow = 'hidden';
+    switch (type) {
+      case 'conditions':
+        setIsConditionsOpen(true);
+        return;
+      case 'success':
+        setIsSuccessOpen(true);
+        return;
+      case 'error':
+        setIsErrorOpen(true);
+        return;
+    }
   };
 
-  const handleClose = () => {
-    setIsOpen(false);
+  const handleClose = (type: 'conditions' | 'success' | 'error') => {
     document.body.style.overflow = 'auto';
+    switch (type) {
+      case 'conditions':
+        setIsConditionsOpen(false);
+        return;
+      case 'success':
+        setIsSuccessOpen(false);
+        return;
+      case 'error':
+        setIsErrorOpen(false);
+        return;
+    }
   };
 
   return (
     <div className="outline-dashed">
-      <Button tag="a" buttonType="button" accent={false} onClick={handleOpen}>
-        {
-          'Modal test button - try "success" | "error" | "conditions" for prop "type"'
-        }
-      </Button>
-      {/* {isOpen && <Modal onClose={handleClose} type="success" />} */}
-      {isOpen && (
-        <Modal onClose={handleClose} type="conditions">
+      <button className="mr-5 bg-accent" onClick={() => handleOpen('success')}>
+        SUCCESS
+      </button>
+      <button className="mr-5 bg-accent" onClick={() => handleOpen('error')}>
+        ERROR
+      </button>
+      <button
+        className="mr-5 bg-accent"
+        onClick={() => handleOpen('conditions')}
+      >
+        CONDITIONS
+      </button>
+
+      {isSuccessOpen && (
+        <Modal onClose={() => handleClose('success')} type="success" />
+      )}
+      {isErrorOpen && (
+        <Modal onClose={() => handleClose('error')} type="error" />
+      )}
+      {isConditionsOpen && (
+        <Modal onClose={() => handleClose('conditions')} type="conditions">
           <Policies />
         </Modal>
       )}
