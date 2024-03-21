@@ -21,12 +21,12 @@ export default function Home() {
         <Logo
           path="header"
           onClick={onLogoClick}
-          stylesLogo="mr-[90px] xl:ml-[102px]"
+          className="mr-[90px] xl:ml-[102px]"
         />
         <Navbar variant="header" />
       </div>
       <Hero />
-      {/* <Services /> */}
+      <Services />
       <Conditions />
       <Button tag="a" accent={true} className="font-semibold">
         {common.buttonsText.v1}
@@ -38,8 +38,8 @@ export default function Home() {
         {common.buttonsText.v1}
       </Button>
       <BurgerMenuEmulator />
-      <Logo path="footer" onClick={onLogoClick} stylesLogo="ml-7" />
-      <Socials stylesSocials="mt-5" />
+      <Logo path="footer" onClick={onLogoClick} className="ml-7" />
+      <Socials className="mt-5" />
     </>
   );
 }
