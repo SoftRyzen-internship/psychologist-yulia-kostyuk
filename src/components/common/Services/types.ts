@@ -10,3 +10,7 @@ export type Cards = {
   subtitle: string;
   description?: string;
 };
+
+export interface ServiceCardProps {
+  card: Cards;
+}
