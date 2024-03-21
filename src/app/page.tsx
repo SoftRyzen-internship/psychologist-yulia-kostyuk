@@ -8,6 +8,7 @@ import { ModalTestComponent } from '@/components/ui/Modal/ModalTestComponent';
 import common from '@/data/common.json';
 import BurgerMenuEmulator from '@/components/ui/BurgerMenu/BurgerMenuEmulator';
 import Services from '@/components/common/Services/Services';
+import { Conditions } from '@/components/common/Conditions';
 
 export default function Home() {
   const onLogoClick = () => {
@@ -20,12 +21,13 @@ export default function Home() {
         <Logo
           path="header"
           onClick={onLogoClick}
-          stylesLogo="mr-[90px] xl:ml-[102px]"
+          className="mr-[90px] xl:ml-[102px]"
         />
         <Navbar variant="header" />
       </div>
       <Hero />
       <Services />
+      <Conditions />
       <Button tag="a" accent={true} className="font-semibold">
         {common.buttonsText.v1}
       </Button>
@@ -36,9 +38,8 @@ export default function Home() {
         {common.buttonsText.v1}
       </Button>
       <BurgerMenuEmulator />
-      <Logo path="footer" onClick={onLogoClick} stylesLogo="ml-7" />
-      <Socials stylesSocials="mt-5" />
-      <ModalTestComponent />
+      <Logo path="footer" onClick={onLogoClick} className="ml-7" />
+      <Socials className="mt-5" />
     </>
   );
 }
