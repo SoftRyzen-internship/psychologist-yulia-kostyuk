@@ -6,7 +6,7 @@ import { Navbar } from '../Navbar';
 import { CloseIcon } from '@/../public/icons';
 import { IBurgerMenuProps } from './types';
 
-export default function BurgerMenu({ onClose }: IBurgerMenuProps) {
+export const BurgerMenu: React.FC<IBurgerMenuProps> = ({ onClose }) => {
   useEffect(() => {
     const close = (e: { keyCode: number }) => {
       if (e.keyCode === 27) {
@@ -21,7 +21,7 @@ export default function BurgerMenu({ onClose }: IBurgerMenuProps) {
     <>
       <div className="bg-backdrop and fixed bottom-0 right-0 z-10 h-full w-full overscroll-none backdrop-blur-xl xl:hidden">
         <div className="mx-auto flex h-lvh w-full flex-col  bg-mainBcg">
-          <div className=" flex justify-between px-5 py-[22px] md:px-8 md:py-[26px]">
+          <div className="flex justify-between px-5 py-[22px] md:px-8 md:py-[26px]">
             <Logo path="header" onClick={onClose} />
             <button
               aria-label="menu button close"
@@ -43,4 +43,4 @@ export default function BurgerMenu({ onClose }: IBurgerMenuProps) {
       </div>
     </>
   );
-}
+};
