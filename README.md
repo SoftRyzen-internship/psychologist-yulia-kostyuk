@@ -209,3 +209,23 @@ the Navbar is clicked.
 | `onclick` | `undefined` | optional, `() => void`, function is called when              |
 
 the NavbarLink is clicked.
+
+- #### component BurgerMenu
+
+| Prop      | Default | Description                                                   |
+| --------- | ------- | ------------------------------------------------------------- |
+| `onClose` | --      | required, `() => void`, add the function of closing the modal |
+
+- #### component Notification
+
+| Prop   | Default | Description                                       |
+| ------ | ------- | ------------------------------------------------- |
+| `type` | --      | required, `sucess`, `error`, type of notification |
+
+- #### component Modal
+
+| Prop       | Default | Description                                                     |
+| ---------- | ------- | --------------------------------------------------------------- |
+| `type`     | --      | required, `conditions`, `sucess`, `error`, type of notification |
+| `onClose`  | --      | required, `() => void`, add the function of closing the modal   |
+| `children` | --      | optional, `React.ReactNode`, React components                   |
