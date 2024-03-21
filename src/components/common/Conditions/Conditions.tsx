@@ -1,25 +1,14 @@
 'use client';
 
 import { PortableText } from '@portabletext/react';
-import { PortableTextBlock } from 'sanity';
 import React, { useEffect, useState } from 'react';
+
+import { Condition } from './types';
 
 import { getConditions } from '@/../sanity/request/conditionsRequest';
 
-type Condition = {
-  _id: string;
-  _type: string;
-  description: PortableTextBlock[];
-};
-
 export const Conditions = () => {
   const [conditions, setConditions] = useState<Condition[]>([]);
-
-  //   conditions.map((condition: any) =>
-  //     condition.description.map((desc: any) => {
-  //       desc.children.map((children: any) => console.log(children.text));
-  //     }),
-  //   );
 
   useEffect(() => {
     const fetchData = async () => {
@@ -32,15 +21,10 @@ export const Conditions = () => {
   }, []);
 
   return (
-    <>
-      {conditions.map(condition => (
-        <div
-          key={condition._id}
-          className="container font-montserrat text-[16px] font-normal not-italic leading-6 tracking-[0.2px] text-text"
-        >
-          <PortableText key={condition._id} value={condition.description} />
-        </div>
+    <div className="container font-montserrat text-[14px] font-normal not-italic leading-5 tracking-[0.2px] text-text xl:text-[16px] xl:leading-6">
+      {conditions.map((condition, index) => (
+        <PortableText key={index} value={condition.description} />
       ))}
-    </>
+    </div>
   );
 };
