@@ -4,7 +4,7 @@ import { Hero } from '@/sections/Hero';
 import { Button } from '@/components/ui/Button';
 import { Socials } from '@/components/ui/Socials';
 import { Logo } from '@/components/ui/Logo';
-
+import { ModalTestComponent } from '@/components/ui/Modal/ModalTestComponent';
 import common from '@/data/common.json';
 import BurgerMenuEmulator from '@/components/ui/BurgerMenu/BurgerMenuEmulator';
 import Services from '@/components/common/Services/Services';
@@ -38,6 +38,7 @@ export default function Home() {
       <BurgerMenuEmulator />
       <Logo path="footer" onClick={onLogoClick} stylesLogo="ml-7" />
       <Socials stylesSocials="mt-5" />
+      <ModalTestComponent />
     </>
   );
 }

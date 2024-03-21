@@ -5,6 +5,7 @@ import ArrowWhiteIcon from './arrow-white.svg';
 import BurgerMenuIcon from './burger-menu.svg';
 import CloseIcon from './close-icon.svg';
 import ConversationIcon from './conversation.svg';
+import ErrorIcon from './error.svg'
 import FacebookIcon from './facebook.svg';
 import FlowerIcon from './flower.svg';
 import GoItIcon from './goit.svg';
@@ -12,6 +13,7 @@ import InstagramIcon from './instagram.svg';
 import LockIcon from './lock.svg';
 import MailIcon from './mail.svg';
 import PhoneIcon from './phone.svg';
+import SuccessIcon from './success.svg'
 import SoftRyzenIcon from './softryzen.svg';
 import TelegramIcon from './telegram.svg';
 
@@ -23,6 +25,7 @@ ArrowWhiteIcon,
 BurgerMenuIcon,
 ConversationIcon,
 CloseIcon,
+ErrorIcon,
 FacebookIcon,
 FlowerIcon,
 GoItIcon,
@@ -31,5 +34,6 @@ LockIcon,
 MailIcon,
 PhoneIcon,
 SoftRyzenIcon,
+SuccessIcon,
 TelegramIcon,
 };
