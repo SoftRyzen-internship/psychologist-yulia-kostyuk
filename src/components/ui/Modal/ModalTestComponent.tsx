@@ -80,13 +80,13 @@ export function ModalTestComponent() {
     <div className="outline-dashed">
       <Button tag="a" buttonType="button" accent={false} onClick={handleOpen}>
         {
-          'Modal test button - try "success" | "error" | "policies" for prop "type"'
+          'Modal test button - try "success" | "error" | "conditions" for prop "type"'
         }
       </Button>
       {/* {isOpen && <Modal onClose={handleClose} type="success" />} */}
       {isOpen && (
         <Modal onClose={handleClose} type="conditions">
-          <Policies></Policies>
+          <Policies />
         </Modal>
       )}
     </div>
