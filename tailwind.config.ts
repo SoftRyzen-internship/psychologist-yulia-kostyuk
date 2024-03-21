@@ -40,6 +40,7 @@ const config: Config = {
         tenor: ['var(--font-tenor)'],
       },
       fontSize: {
+        medium: ['28px', '1.28'],
         lightLarge: ['32px', '1.25'],
         large: ['40px', '1.2'],
         extraLarge: ['56px', '1.07'],
