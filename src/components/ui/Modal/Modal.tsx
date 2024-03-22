@@ -23,7 +23,7 @@ export function Modal({ type, onClose, children }: ModalProps) {
     <>
       <div
         onClick={OnBackDropClick}
-        className="bg-backdrop and fixed bottom-0 right-0 z-10 h-full w-full overflow-auto  overscroll-none "
+        className="and fixed bottom-0 right-0 z-10 h-full w-full overflow-auto overscroll-none  bg-backdrop "
       >
         <div className="relative top-1/4 mx-auto flex w-[320px] flex-col bg-[#E6E1D5]  px-6 py-8 md:w-[540px] md:p-12 xl:w-[572px] xl:p-16">
           <button
