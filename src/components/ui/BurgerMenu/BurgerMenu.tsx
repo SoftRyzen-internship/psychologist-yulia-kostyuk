@@ -5,6 +5,7 @@ import { Socials } from '../Socials';
 import { Navbar } from '../Navbar';
 import { CloseIcon } from '@/../public/icons';
 import { IBurgerMenuProps } from './types';
+import common from '@/data/common.json'
 
 export const BurgerMenu: React.FC<IBurgerMenuProps> = ({ onClose }) => {
   useEffect(() => {
@@ -30,7 +31,7 @@ export const BurgerMenu: React.FC<IBurgerMenuProps> = ({ onClose }) => {
         <div className="flex justify-between px-5 py-[22px] md:px-8 md:py-[26px]">
           <Logo path="header" onClick={onClose} />
           <button
-            aria-label="menu button close"
+            aria-label={common['aria-label'].btnClose}
             onClick={onClose}
             className="duration-250 transform transition hover:scale-110"
           >

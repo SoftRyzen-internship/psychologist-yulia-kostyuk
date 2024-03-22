@@ -4,7 +4,7 @@ import { Hero } from '@/sections/Hero';
 import { Button } from '@/components/ui/Button';
 import { Socials } from '@/components/ui/Socials';
 import { Logo } from '@/components/ui/Logo';
-import MyValues from '@/components/common/MyValues/MyValues';
+import { MyValues } from '@/components/common/MyValues';
 
 import common from '@/data/common.json';
 
