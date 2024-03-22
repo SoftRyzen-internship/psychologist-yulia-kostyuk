@@ -4,6 +4,7 @@ import { BurgerMenu } from '@/components/ui/BurgerMenu';
 import { BurgerMenuIcon } from '@/../public/icons';
 import { Navbar } from '@/components/ui/Navbar';
 import { Logo } from '@/components/ui/Logo';
+import common from '@/data/common.json';
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,7 +35,7 @@ export const Header = () => {
             className="ml-auto block xl:hidden"
             onClick={handleOpen}
           >
-            <BurgerMenuIcon />
+            <BurgerMenuIcon aria-label={common.layout['aria-label'].burger} />
           </button>
           {isOpen && <BurgerMenu onClose={handleClose} />}
         </div>
