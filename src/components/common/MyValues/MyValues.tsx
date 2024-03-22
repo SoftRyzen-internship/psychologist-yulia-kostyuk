@@ -3,7 +3,6 @@ import myValues from '@/data/myValues.json';
 import { Value } from './types';
 import { ValueItem } from './ValueItem';
 
-
 export const MyValues: React.FC = () => {
   return (
     <div className="container">
@@ -16,4 +15,3 @@ export const MyValues: React.FC = () => {
     </div>
   );
 };
-
