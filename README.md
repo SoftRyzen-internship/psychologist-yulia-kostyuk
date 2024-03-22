@@ -113,17 +113,17 @@ is a list of more common components and their API.
 
 - #### component Logo
 
-| Prop         | Default | Description                                                   |
-| ------------ | ------- | ------------------------------------------------------------- |
-| `path`       | --      | required, `string`. choose 'header' or 'footer'               |
-| `onClick`    | --      | required, `() => void`, add the function of closing the modal |
-| `stylesLogo` | --      | optional, `string`, adds custom css class to the Logo         |
+| Prop        | Default | Description                                                         |
+| ----------- | ------- | ------------------------------------------------------------------- |
+| `path`      | --      | required, `string`. choose 'header' or 'footer'                     |
+| `onClick`   | --      | optional, `() => void`, add the function of closing the mobile-menu |
+| `className` | --      | optional, `string`, adds custom css class to the Logo               |
 
 - #### component Socials
 
-| Prop            | Default | Description                                              |
-| --------------- | ------- | -------------------------------------------------------- |
-| `stylesSocials` | --      | optional, `string`, adds custom css class to the Socials |
+| Prop        | Default | Description                                              |
+| ----------- | ------- | -------------------------------------------------------- |
+| `className` | --      | optional, `string`, adds custom css class to the Socials |
 
 - #### component Button
 
@@ -158,3 +158,11 @@ the Navbar is clicked.
 | `onclick` | `undefined` | optional, `() => void`, function is called when              |
 
 the NavbarLink is clicked.
+
+- #### component BurgerMenu
+
+| Prop Description | Default |     |     | ----------- | ----------- |
+| ---------------- | ------- | --- | --- | ----------- | ----------- |
+
+| `onClose` | `undefined` | optional, `() => void`, function is called when the
+icon is clicked.
