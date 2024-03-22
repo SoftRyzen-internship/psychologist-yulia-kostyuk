@@ -14,7 +14,7 @@ export const Navbar: React.FC<NavbarProps> = ({
     {
       'text-text font-montserrat text-sm flex-col gap-6':
         variant === 'mobile-menu',
-      'text-text font-montserrat text-base gap-10 smOnly:hidden mdOnly:hidden':
+      'text-text font-montserrat text-base gap-10 notXL:hidden':
         variant === 'header',
     },
     className,
