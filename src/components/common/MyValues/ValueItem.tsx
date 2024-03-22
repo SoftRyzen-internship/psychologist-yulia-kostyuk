@@ -11,19 +11,32 @@ interface ValueItemProps {
 
 export const ValueItem: React.FC<ValueItemProps> = ({ value }) => {
   return (
-
-    <div className="p-6 md:p-8 xl:p-10 flex flex-col bg-cardBcg md:flex-row xl:flex-col justify-center items-center">
-      <div className=' mb-6 md:mb-0 '>
-        {value.name === "lock" && <Lock className="h-12 w-12 md:h-16 md:w-16" width={48} height={48} />}
-        {value.name === "meeting" && <Meeting className="h-12 w-12 md:h-16 md:w-16" width={48} height={48} />}
-        {value.name === "flower" && <Flower className="h-12 w-12 md:h-16 md:w-16" width={48} height={48} />}
+    <div className="flex flex-col items-center justify-center bg-cardBcg p-6 md:flex-row md:p-8 xl:flex-col xl:p-10">
+      <div className=" mb-6 md:mb-0 ">
+        {value.name === 'lock' && (
+          <Lock className="h-12 w-12 md:h-16 md:w-16" width={48} height={48} />
+        )}
+        {value.name === 'meeting' && (
+          <Meeting
+            className="h-12 w-12 md:h-16 md:w-16"
+            width={48}
+            height={48}
+          />
+        )}
+        {value.name === 'flower' && (
+          <Flower
+            className="h-12 w-12 md:h-16 md:w-16"
+            width={48}
+            height={48}
+          />
+        )}
       </div>
-      <div className='flex flex-col justify-center items-center text-center'>
-        <h3 className="mb-3 text-xl font-normal text-accent font-tenor tracking-[0.5px] md:mb-4 xl:mb-6">{value.subTitle}</h3>
+      <div className="flex flex-col items-center justify-center text-center">
+        <h3 className="mb-3 font-tenor text-xl font-normal tracking-[0.5px] text-accent md:mb-4 xl:mb-6">
+          {value.subTitle}
+        </h3>
         <p>{value.description}</p>
       </div>
     </div>
-
-
-  )
-}
+  );
+};
