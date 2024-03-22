@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { classnames } from '@/utils/classnames';
 import { navLinks } from '@/data/header';
 import { NavbarLink } from '../NavbarLink';
@@ -12,9 +12,9 @@ export const Navbar: React.FC<NavbarProps> = ({
   const NavbarClasses = classnames(
     'flex',
     {
-      'text-text font-montserrat text-center text-sm tracking-[0.2px] flex-col gap-6 xl:hidden':
+      'text-text font-montserrat text-sm flex-col gap-6':
         variant === 'mobile-menu',
-      'text-text font-montserrat text-base tracking-[0.2px] mt-2 gap-10 flex-row smOnly:hidden mdOnly:hidden':
+      'text-text font-montserrat text-base gap-10 smOnly:hidden mdOnly:hidden':
         variant === 'header',
     },
     className,
