@@ -16,17 +16,17 @@
 
   "socials": [
     {
-      "id": 1,
+      "name": "telegram",
       "path": "https://t.me/kostiuk_ulia",
       "ariaLabel": "посилання на телеграм"
     },
     {
-      "id": 2,
+      "name": "instagram",
       "path": "https://www.instagram.com/kostiuk_ulia_psy/",
       "ariaLabel": "посилання на інстаграм"
     },
     {
-      "id": 3,
+      "name": "facebook",
       "path": "https://www.facebook.com/profile.php?id=61553456342276",
       "ariaLabel": "посилання на фейсбук"
     }

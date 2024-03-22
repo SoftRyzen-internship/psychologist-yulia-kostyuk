@@ -1,5 +1,5 @@
 export type SocialsItemProps = {
-  id: number;
+  name: string;
   href: string;
   ariaL: string;
 };

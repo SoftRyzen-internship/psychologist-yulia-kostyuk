@@ -13,8 +13,8 @@ export const Socials: React.FC<SocialsProps> = ({ className }) => {
     <ul className={socialsClasses}>
       {socials.map(item => (
         <SocialsItem
-          key={item.id}
-          id={item.id}
+          key={item.name}
+          name={item.name}
           href={item.path}
           ariaL={item.ariaLabel}
         />

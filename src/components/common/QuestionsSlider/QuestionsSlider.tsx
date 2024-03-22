@@ -14,8 +14,7 @@ export const QuestionsSlider: React.FC<QuestionsSliderProps> = ({
       modules={[A11y]}
       initialSlide={1}
       direction={'horizontal'}
-      // centeredSlides={true}
-      // grabCursor={true}
+      loop={true}
       a11y={{ enabled: true }}
       breakpoints={{
         0: {
@@ -30,16 +29,16 @@ export const QuestionsSlider: React.FC<QuestionsSliderProps> = ({
         },
       }}
     >
-      {sectionQuestion.map(({ id, img, alt, label }) => (
-        <SwiperSlide key={id}>
-          <div className="h-[412px] w-[280px] rounded-[50%] border border-solid border-white px-[36px] py-[52px]">
-            <Image
-              src={img}
-              alt={alt}
-              priority
-              width={208}
-              height={308}
-              className=""
+      {sectionQuestion.map(({ id, img, img2, alt, label }) => (
+        <SwiperSlide
+          key={id}
+          className="caption flex flex-col text-center font-normal text-white xl:text-[24px]"
+        >
+          <div className="mb-[38px] ml-auto mr-auto h-[412px] w-[280px] rounded-[50%] border border-solid border-white px-[36px] py-[52px]">
+            <Image src={img} alt={alt} width={208} height={308} />
+            <source
+              srcSet={img2}
+              //   media="(min-width: 768px)"
             />
           </div>
           {label}
