@@ -35,10 +35,7 @@ export const BurgerMenu: React.FC<IBurgerMenuProps> = ({ onClose }) => {
             aria-label={common.layout['aria-label'].btnClose}
             className="duration-250 transform transition hover:scale-110"
           >
-            <CloseIcon
-              width={14}
-              height={14}
-            />
+            <CloseIcon width={14} height={14} />
           </button>
         </div>
         <div className=" flex h-full flex-col justify-between px-8 py-10 md:py-[60px]">
