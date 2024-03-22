@@ -9,12 +9,14 @@
   {
     "id": 2,
     "img": "/images/slides/questions-slide-2.webp",
+    "img2": "/images/slides/questions-slide-2@2x.webp",
     "alt": "зображення слайдера відносини",
     "label": "Відносини"
   },
   {
     "id": 3,
     "img": "/images/slides/questions-slide-3.webp",
+    "img2": "/images/slides/questions-slide-3@2x.webp",
     "alt": "зображення слайдера жіночність",
     "label": "Жіночність"
   },

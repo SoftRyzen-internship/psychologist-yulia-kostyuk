@@ -36,10 +36,7 @@ export const QuestionsSlider: React.FC<QuestionsSliderProps> = ({
         >
           <div className="mb-[38px] ml-auto mr-auto h-[412px] w-[280px] rounded-[50%] border border-solid border-white px-[36px] py-[52px]">
             <Image src={img} alt={alt} width={208} height={308} />
-            <source
-              srcSet={img2}
-              //   media="(min-width: 768px)"
-            />
+            <source srcSet={img2} media="(min-width: 768px)" />
           </div>
           {label}
         </SwiperSlide>
