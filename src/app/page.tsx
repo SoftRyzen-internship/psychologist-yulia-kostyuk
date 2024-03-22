@@ -8,6 +8,9 @@ import { Logo } from '@/components/ui/Logo';
 import common from '@/data/common.json';
 import BurgerMenuEmulator from '@/components/ui/BurgerMenu/BurgerMenuEmulator';
 import Services from '@/components/common/Services/Services';
+import { QuestionsSlider } from '@/components/common/QuestionsSlider';
+
+import dataSlider from '@/data/questions.json';
 
 export default function Home() {
   const onLogoClick = () => {
@@ -38,6 +41,7 @@ export default function Home() {
       <BurgerMenuEmulator />
       <Logo path="footer" onClick={onLogoClick} stylesLogo="ml-7" />
       <Socials stylesSocials="mt-5" />
+      <QuestionsSlider sectionQuestion={dataSlider} />
     </>
   );
 }
