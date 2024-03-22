@@ -32,7 +32,7 @@ export default function Services() {
             className="flex flex-col bg-cardBcg p-6 md:p-0  xl:flex-row xl:justify-between "
             key={service._id}
           >
-            <div className="mb-8 flex flex-col border-b-[1px] border-solid border-accent/20 pb-8 md:flex-row md:items-center md:justify-between md:px-8 md:pt-8 xl:mb-0 xl:flex-col xl:items-start xl:border-none xl:pb-[52px] xl:pl-[80px] xl:pt-[68px]">
+            <div className="flex flex-col border-b-[1px] border-solid border-accent/20 pb-8 md:flex-row md:items-center md:justify-between md:px-8 md:pt-8 xl:flex-col  xl:items-start xl:border-none xl:pb-[52px] xl:pl-[80px] xl:pt-[68px] notXL:mb-8">
               <div className="flex flex-col items-center pb-8 md:items-start md:justify-between md:pb-0 xl:max-w-[303px] xl:items-start">
                 <h3 className="section-subtitle mb-4 font-tenor text-accent">
                   {service.title}
