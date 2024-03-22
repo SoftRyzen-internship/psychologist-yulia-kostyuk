@@ -10,6 +10,7 @@ import common from '@/data/common.json';
 
 import Services from '@/components/common/Services/Services';
 import { Conditions } from '@/components/common/Conditions';
+import { ModalTestComponent } from '@/components/ui/Modal/ModalTestComponent';
 
 export default function Home() {
   const onLogoClick = () => {
@@ -33,6 +34,7 @@ export default function Home() {
       </Button>
       <Logo path="footer" onClick={onLogoClick} className="ml-7" />
       <Socials className="mt-5" />
+      <ModalTestComponent />
     </>
   );
 }
