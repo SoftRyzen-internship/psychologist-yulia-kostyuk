@@ -19,7 +19,7 @@ npm run lint ||
         false;
 )
 
-# Check tsconfig standards
+#Check tsconfig standards
 npm run types ||
 (
     echo '🤡😂❌🤡 Failed Type check. 🤡😂❌🤡

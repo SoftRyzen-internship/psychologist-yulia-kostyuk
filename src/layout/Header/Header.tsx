@@ -4,6 +4,7 @@ import { BurgerMenu } from '@/components/ui/BurgerMenu';
 import { BurgerMenuIcon } from '@/../public/icons';
 import { Navbar } from '@/components/ui/Navbar';
 import { Logo } from '@/components/ui/Logo';
+import common from '@/data/common.json';
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,9 +30,9 @@ export const Header = () => {
           <Logo path="header" onClick={onLogoClick} />
           <Navbar variant="header" />
           <button
-            aria-label="burger menu"
             type="button"
             className="ml-auto block xl:hidden"
+            aria-label={common.layout['aria-label'].burger}
             onClick={handleOpen}
           >
             <BurgerMenuIcon />
