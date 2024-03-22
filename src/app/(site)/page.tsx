@@ -11,6 +11,7 @@ import common from '@/data/common.json';
 import Services from '@/components/common/Services/Services';
 import { Conditions } from '@/components/common/Conditions';
 import { ModalTestComponent } from '@/components/ui/Modal/ModalTestComponent';
+// import { Modal } from '@/components/ui/Modal';
 
 export default function Home() {
   const onLogoClick = () => {
