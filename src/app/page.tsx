@@ -4,6 +4,7 @@ import { Hero } from '@/sections/Hero';
 import { Button } from '@/components/ui/Button';
 import { Socials } from '@/components/ui/Socials';
 import { Logo } from '@/components/ui/Logo';
+import MyValues from '@/components/common/MyValues/MyValues';
 
 import common from '@/data/common.json';
 
@@ -18,6 +19,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <MyValues />
       <Services />
       <Conditions />
       <Button tag="a" accent={true} className="font-semibold">
