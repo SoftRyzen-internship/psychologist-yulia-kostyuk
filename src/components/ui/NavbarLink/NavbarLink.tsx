@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import { classnames } from '@/utils/classnames';
 import { NavbarLinkProps } from '@/components/ui/NavbarLink/types';
