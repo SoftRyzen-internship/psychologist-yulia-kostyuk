@@ -30,12 +30,12 @@ export const Header = () => {
           <Logo path="header" onClick={onLogoClick} />
           <Navbar variant="header" />
           <button
-            aria-label="burger menu"
             type="button"
             className="ml-auto block xl:hidden"
+            aria-label={common.layout['aria-label'].burger}
             onClick={handleOpen}
           >
-            <BurgerMenuIcon aria-label={common.layout['aria-label'].burger} />
+            <BurgerMenuIcon />
           </button>
           {isOpen && <BurgerMenu onClose={handleClose} />}
         </div>
