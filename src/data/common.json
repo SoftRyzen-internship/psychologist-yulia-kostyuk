@@ -7,6 +7,10 @@
     "logo": {
       "label": "Юлія Костюк",
       "ariaLabel": "Посилання на головну сторінку"
+    },
+    "aria-label": {
+      "burger": "Бургер меню",
+      "btnClose": "Закрити бургер меню"
     }
   },
   "buttonsText": {
