@@ -32,12 +32,12 @@ export const BurgerMenu: React.FC<IBurgerMenuProps> = ({ onClose }) => {
           <Logo path="header" onClick={onClose} />
           <button
             onClick={onClose}
+            aria-label={common.layout['aria-label'].btnClose}
             className="duration-250 transform transition hover:scale-110"
           >
             <CloseIcon
               width={14}
               height={14}
-              aria-label={common.layout['aria-label'].btnClose}
             />
           </button>
         </div>
