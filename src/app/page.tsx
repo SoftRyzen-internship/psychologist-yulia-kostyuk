@@ -4,7 +4,7 @@ import { Hero } from '@/sections/Hero';
 import { Button } from '@/components/ui/Button';
 import { Socials } from '@/components/ui/Socials';
 import { Logo } from '@/components/ui/Logo';
-
+import { ModalTestComponent } from '@/components/ui/Modal/ModalTestComponent';
 import common from '@/data/common.json';
 
 import Services from '@/components/common/Services/Services';
@@ -31,6 +31,7 @@ export default function Home() {
       </Button>
       <Logo path="footer" onClick={onLogoClick} className="ml-7" />
       <Socials className="mt-5" />
+      <ModalTestComponent />
     </>
   );
 }
