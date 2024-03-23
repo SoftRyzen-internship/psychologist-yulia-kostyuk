@@ -12,6 +12,9 @@
     "aria-label": {
       "burger": "Бургер меню",
       "btnClose": "Закрити бургер меню"
+    },
+    "titles": {
+      "services": "Мої послуги"
     }
   },
 
