@@ -22,7 +22,7 @@ export default function BurgerMenuEmulator() {
       <button type="button" onClick={handleOpen}>
         <BurgerMenuIcon />
       </button>
-      {isOpen && <BurgerMenu onClose={handleClose} />}
+      {isOpen && <BurgerMenu onClose={handleClose} isOpen={isOpen} />}
     </>
   );
 }
