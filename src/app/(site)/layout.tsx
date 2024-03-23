@@ -35,7 +35,7 @@ export default function RootLayout({
         className={classnames(
           montserrat.variable,
           tenor.variable,
-          'flex h-full min-h-screen flex-col bg-gradient-to-b from-cyan-500  to-blue-50',
+          'flex h-full min-h-screen flex-col bg-mainBcg',
         )}
       >
         <Header />

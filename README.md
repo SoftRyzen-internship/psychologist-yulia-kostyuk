@@ -127,16 +127,16 @@ is a list of more common components and their API.
 
 - #### component Button
 
-| Prop         | Default     | Description                                                                           |
-| ------------ | ----------- | ------------------------------------------------------------------------------------- |
-| `tag`        | --          | required, `string`, it can be either an 'a' or a 'button'.                            |
-| `accent`     | --          | required, `boolean`, indicates whether the button should have an accent style or not. |
-| `children`   | --          | required, `ReactNode`                                                                 |
-| `href`       | `undefined` | optional, `string`, specifies the URL of the link.                                    |
-| `buttonType` | `button`    | optional, `string`, specifies the type of button.                                     |
-| `onClick`    | `undefined` | required, `() => void`, function is called when the button is clicked.                |
-| `disabled`   | `false`     | optional, `string`, if 'true', the button is disabled and cannot be clicked.          |
-| `classname`  | `undefined` | optional, `string`, adds custom css class to the Button component.                    |
+| Prop         | Default     | Description                                                                  |
+| ------------ | ----------- | ---------------------------------------------------------------------------- |
+| `tag`        | --          | required, `string`, it can be either an 'a' or a 'button'.                   |
+| `accent`     | --          | required, `boolean`, should button have an accent style or not.              |
+| `children`   | --          | required, `ReactNode`                                                        |
+| `href`       | `undefined` | optional, `string`, specifies the URL of the link.                           |
+| `buttonType` | `button`    | optional, `string`, specifies the type of button.                            |
+| `onClick`    | `undefined` | required, `() => void`, function is called when the button is clicked.       |
+| `disabled`   | `false`     | optional, `string`, if 'true', the button is disabled and cannot be clicked. |
+| `classname`  | `undefined` | optional, `string`, adds custom css class to the Button component.           |
 
 - #### component Navbar
 
@@ -158,3 +158,29 @@ the Navbar is clicked.
 | `onclick` | `undefined` | optional, `() => void`, function is called when              |
 
 the NavbarLink is clicked.
+
+- #### component Button
+
+| Prop      | Default | Description                                                   |
+| --------- | ------- | ------------------------------------------------------------- |
+| `onClose` | --      | required, `() => void`, add the function of closing the modal |
+
+- #### component BurgerMenu
+
+| Prop      | Default | Description                                                   |
+| --------- | ------- | ------------------------------------------------------------- |
+| `onClose` | --      | required, `() => void`, add the function of closing the modal |
+
+- #### component Notification
+
+| Prop   | Default | Description                                       |
+| ------ | ------- | ------------------------------------------------- |
+| `type` | --      | required, `sucess`, `error`, type of notification |
+
+- #### component Modal
+
+| Prop       | Default | Description                                                     |
+| ---------- | ------- | --------------------------------------------------------------- |
+| `type`     | --      | required, `conditions`, `sucess`, `error`, type of notification |
+| `onClose`  | --      | required, `() => void`, add the function of closing the modal   |
+| `children` | --      | optional, `React.ReactNode`, React components                   |

@@ -21,9 +21,16 @@ export const Conditions = () => {
   }, []);
 
   return (
-    <div className="container prose font-montserrat text-[14px] font-normal not-italic leading-5 tracking-[0.2px] text-text xl:text-[16px] xl:leading-6">
+    <div className="container">
       {conditions.map((condition, index) => (
-        <PortableText key={index} value={condition.description} />
+        <React.Fragment key={index}>
+          <h3 className="section-subtitle mb-6 font-tenor text-accent xl:mb-[60px] xl:tracking-[0.5px]">
+            <PortableText value={condition.title} />
+          </h3>
+          <div className="prose font-montserrat text-[14px] font-normal not-italic leading-5 tracking-[0.2px] text-text xl:text-[16px] xl:leading-6">
+            <PortableText key={index} value={condition.description} />
+          </div>
+        </React.Fragment>
       ))}
     </div>
   );
