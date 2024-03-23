@@ -40,3 +40,4 @@ export const ValueItem: React.FC<ValueItemProps> = ({ value }) => {
     </div>
   );
 };
+
