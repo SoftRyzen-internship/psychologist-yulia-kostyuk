@@ -4,11 +4,11 @@ import { Hero } from '@/sections/Hero';
 import { Button } from '@/components/ui/Button';
 import { Socials } from '@/components/ui/Socials';
 import { Logo } from '@/components/ui/Logo';
-import MyValues from '@/components/common/MyValues/MyValues';
+import { Values } from '@/sections/Values';
+import { Services } from '@/sections/Services';
 
 import common from '@/data/common.json';
 
-import Services from '@/components/common/Services/Services';
 import { Conditions } from '@/components/common/Conditions';
 import { ModalTestComponent } from '@/components/ui/Modal/ModalTestComponent';
 // import { Modal } from '@/components/ui/Modal';
@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <MyValues />
+      <Values />
       <Services />
       <Conditions />
       <Button tag="a" accent={true} className="font-semibold">
