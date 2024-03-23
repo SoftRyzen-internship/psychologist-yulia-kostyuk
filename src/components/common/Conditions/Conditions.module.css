@@ -1,0 +1,15 @@
+.list > ul > li {
+  position: relative;
+  width: 700px;
+}
+
+.list > ul > li::before {
+  content: '';
+  position: absolute;
+  top: 43%;
+  left: -2%;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #292929;
+}

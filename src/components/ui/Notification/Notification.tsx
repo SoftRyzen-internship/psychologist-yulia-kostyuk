@@ -23,9 +23,9 @@ export function Notification({ type }: NotificationProps) {
   return (
     <div className="flex flex-col items-center">
       {type === 'success' ? (
-        <SuccessIcon className="mb-8 xl:mb-10" />
+        <SuccessIcon width={64} height={64} className="mb-8 xl:mb-10" />
       ) : (
-        <ErrorIcon className="mb-8 xl:mb-10" />
+        <ErrorIcon width={64} height={64} className="mb-8 xl:mb-10" />
       )}
       <p className={titleStyles}>{title}</p>
       <p className="whitespace-pre-line text-center font-montserrat text-sm xl:text-base">

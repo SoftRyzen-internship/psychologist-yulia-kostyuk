@@ -9,8 +9,12 @@ import { Services } from '@/sections/Services';
 
 import common from '@/data/common.json';
 
-import { Conditions } from '@/components/common/Conditions';
-import { ModalTestComponent } from '@/components/ui/Modal/ModalTestComponent';
+import {
+  ModalTestComponent,
+  ModalTestERRORComponent,
+  ModalTestSUCCESSComponent,
+  ModalTestCONDITIONSComponents,
+} from '@/components/ui/Modal';
 // import { Modal } from '@/components/ui/Modal';
 
 export default function Home() {
@@ -23,7 +27,6 @@ export default function Home() {
       <Hero />
       <Values />
       <Services />
-      <Conditions />
       <Button tag="a" accent={true} className="font-semibold">
         {common.buttonsText.v1}
       </Button>
@@ -36,6 +39,9 @@ export default function Home() {
       <Logo path="footer" onClick={onLogoClick} className="ml-7" />
       <Socials className="mt-5" />
       <ModalTestComponent />
+      <ModalTestERRORComponent />
+      <ModalTestSUCCESSComponent />
+      <ModalTestCONDITIONSComponents />
     </>
   );
 }

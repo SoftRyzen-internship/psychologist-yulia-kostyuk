@@ -15,7 +15,7 @@ export const Hero = () => {
           height={500}
           alt="Котик с ножичком))"
         />
-        <Meeting />
+        <Meeting width={70} height={70} />
       </div>
     </section>
   );
