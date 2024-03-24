@@ -13,9 +13,9 @@ export const EducationItem: React.FC<Props> = ({ educationData }) => {
         <li
           key={item.id}
           className={classnames(
-            'border-border flex items-center justify-start border-t-[1px] border-solid py-6 md:py-[38px] xl:py-[42px] smOnly:flex-col',
+            'flex items-center justify-start border-t-[1px] border-solid border-border py-6 md:py-[38px] xl:py-[42px] smOnly:flex-col',
             {
-              'border-border border-b-[1px] border-solid':
+              'border-b-[1px] border-solid border-border':
                 index === educationData.education.length - 1,
             },
           )}
