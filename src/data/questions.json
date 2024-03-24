@@ -1,40 +1,37 @@
 [
   {
     "id": 1,
-    "img": "/images/slides/questions-slide-1.webp",
-    "img2": "/images/slides/questions-slide-1@2x.webp",
+    "img": "/images/slides/questions-slide-1@2x.webp",
     "alt": "зображення слайдера самооцінка",
     "label": "Самооцінка"
   },
   {
     "id": 2,
-    "img": "/images/slides/questions-slide-2.webp",
-    "img2": "/images/slides/questions-slide-2@2x.webp",
+    "img": "/images/slides/questions-slide-2@2x.webp",
     "alt": "зображення слайдера відносини",
     "label": "Відносини"
   },
   {
     "id": 3,
-    "img": "/images/slides/questions-slide-3.webp",
-    "img2": "/images/slides/questions-slide-3@2x.webp",
+    "img": "/images/slides/questions-slide-3@2x.webp",
     "alt": "зображення слайдера жіночність",
     "label": "Жіночність"
   },
   {
     "id": 4,
-    "img": "/images/slides/questions-slide-4.png",
+    "img": "/images/slides/questions-slide-4@2x.webp",
     "alt": "зображення слайдера розвиток чуттєвості",
     "label": "Розвиток чуттєвості"
   },
   {
     "id": 5,
-    "img": "/images/slides/questions-slide-5.png",
+    "img": "/images/slides/questions-slide-5@2x.webp",
     "alt": "зображення слайдера розвиток творчого потенціалу",
     "label": "Розвиток творчого потенціалу"
   },
   {
     "id": 6,
-    "img": "/images/slides/questions-slide-6.png",
+    "img": "/images/slides/questions-slide-6@2x.webp",
     "alt": "зображення слайдера релакс та ін.",
     "label": "Релакс та ін."
   }

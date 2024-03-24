@@ -1,3 +1,4 @@
+import React from 'react';
 import { classnames } from '@/utils/classnames';
 
 import { SocialsItem } from '@/components/ui/SocialsItem';

@@ -49,6 +49,7 @@ const config: Config = {
         mainBcg: '#E5E1D5',
         footerBcg: '#D6D0C5',
         cardBcg: '#FAF5ED',
+        bgQuestions: '#6A7A5F',
         accent: '#395734',
         text: '#292929',
         error: '#CB3D3D',

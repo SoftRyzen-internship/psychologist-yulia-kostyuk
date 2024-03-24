@@ -1,0 +1,4 @@
+.icon:hover,
+.icon:focus {
+  stroke-width: 2px;
+}

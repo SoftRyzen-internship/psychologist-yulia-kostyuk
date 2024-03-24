@@ -1,3 +1,5 @@
+import React from 'react';
+
 import Telegram from '@/../public/icons/telegram.svg';
 import Instagram from '@/../public/icons/instagram.svg';
 import Facebook from '@/../public/icons/facebook.svg';
