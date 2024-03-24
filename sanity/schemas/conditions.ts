@@ -6,6 +6,12 @@ const conditions = defineType({
   type: 'document',
   fields: [
     defineField({
+      name: 'title',
+      title: 'назва',
+      type: 'array',
+      of: [{ type: 'block' }],
+    }),
+    defineField({
       name: 'description',
       title: 'опис',
       type: 'array',
