@@ -5,3 +5,7 @@ export interface Value {
   subTitle?: string;
   description?: string;
 }
+
+export interface ValueItemProps {
+  value: Value;
+}

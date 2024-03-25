@@ -1,16 +1,12 @@
 import React from 'react';
-import { Value } from './types';
 import Lock from '@/../public/icons/lock.svg';
 import Meeting from '@/../public/icons/meeting.svg';
 import Flower from '@/../public/icons/flower.svg';
-
-interface ValueItemProps {
-  value: Value;
-}
+import { ValueItemProps } from './types';
 
 export const ValueItem: React.FC<ValueItemProps> = ({ value }) => {
   return (
-    <div className="flex flex-col items-center justify-center bg-cardBcg p-6 md:flex-row md:p-8 xl:flex-col xl:justify-between xl:p-10 mdOnly:gap-8">
+    <li className="flex flex-col items-center justify-center bg-cardBcg p-6 md:flex-row md:p-8 xl:flex-col xl:justify-between xl:p-10 mdOnly:gap-8">
       <div className=" mb-6 md:mb-0 xl:mb-10">
         {value.name === 'lock' && (
           <Lock className="h-12 w-12 xl:h-16 xl:w-16" width={48} height={48} />
@@ -36,6 +32,6 @@ export const ValueItem: React.FC<ValueItemProps> = ({ value }) => {
         </h3>
         <p className="text font-montserrat">{value.description}</p>
       </div>
-    </div>
+    </li>
   );
 };

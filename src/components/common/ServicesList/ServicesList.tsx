@@ -5,15 +5,14 @@ import { getServices } from '@/../sanity/request/servicesRequest';
 import common from '@/data/common.json';
 import { Button } from '@/components/ui/Button';
 import { Service } from './types';
-import ServiceItem from './ServicesItem';
+import ServiceItem from '../ServiceItem/ServicesItem';
 
-export function MyServices() {
+export function ServicesList() {
   const [services, setServices] = useState<Service[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
       const servicesData = await getServices();
-      console.log(servicesData);
 
       setServices(servicesData);
     };
@@ -22,7 +21,7 @@ export function MyServices() {
   }, []);
 
   return (
-    <div className="xl:pt[68px] flex flex-col gap-6 xl:gap-[60px]">
+    <div className="flex flex-col gap-6 xl:gap-[60px] xl:pt-[68px]">
       {services.map(service => (
         <div
           className="flex flex-col bg-cardBcg p-6 md:p-0  xl:flex-row xl:justify-between "
@@ -45,7 +44,6 @@ export function MyServices() {
               {common.buttonsText.v1}
             </Button>
           </div>
-
           <ul className="flex flex-col gap-5 border-none md:px-8 md:pb-8 xl:border-l-[1px] xl:border-solid xl:border-accent/20 xl:pb-[52px] xl:pl-10 xl:pr-[80px] xl:pt-[68px]">
             {service.card.map((card, index) => (
               <ServiceItem key={index} card={card} />
