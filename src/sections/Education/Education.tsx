@@ -1,10 +1,12 @@
+'use client';
+
 import React from 'react';
 import { EducationItem } from '@/components/common/EducationItem';
-import { EducationProps } from '@/components/common/EducationItem/types';
 import { Button } from '@/components/ui/Button';
 import common from '@/data/common.json';
+import educationData from '@/data/education.json';
 
-export const Education: React.FC<EducationProps> = ({ educationData }) => {
+export const Education = () => {
   return (
     <section className="w-full pb-[60px] pt-10 md:pb-[120px] md:pt-[60px] xl:pb-[140px] xl:pt-20">
       <div className="container">
