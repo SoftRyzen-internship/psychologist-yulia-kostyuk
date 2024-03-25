@@ -28,7 +28,7 @@ const config: Config = {
         },
       },
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        backdrop: `linear-gradient(rgba(41, 41, 41, 0.40),rgba(41, 41, 41, 0.40))`,
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
@@ -54,6 +54,7 @@ const config: Config = {
         error: '#CB3D3D',
         hover: '#2C4228',
         pressed: '#21331F',
+        border: 'rgba(57, 87, 52, 0.30)',
       },
     },
   },
