@@ -23,9 +23,9 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Education educationData={educationData} />
       <Values />
       <Services />
+      <Education educationData={educationData} />
       <Conditions />
       <Button tag="a" accent={true} className="font-semibold">
         {common.buttonsText.v1}
