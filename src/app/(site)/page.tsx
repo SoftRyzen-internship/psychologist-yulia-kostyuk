@@ -6,6 +6,7 @@ import { Services } from '@/sections/Services';
 import { Education } from '@/sections/Education';
 import { Questions } from '@/sections/Questions';
 import { About } from '@/sections/About';
+import { Form } from '@/components/ui/Form';
 
 import {
   ModalTestComponent,
@@ -36,6 +37,7 @@ export default function Home() {
       <ModalTestERRORComponent />
       <ModalTestSUCCESSComponent />
       <ModalTestCONDITIONSComponents />
+      <Form />
     </>
   );
 }
