@@ -8,7 +8,3 @@ declare module '*.svg?url' {
   const content: any;
   export default content;
 }
-
-module.exports = {
-  dimensions: false,
-};

@@ -11,6 +11,4 @@ export type Cards = {
   description?: string;
 };
 
-export interface ServiceCardProps {
-  card: Cards;
-}
+
