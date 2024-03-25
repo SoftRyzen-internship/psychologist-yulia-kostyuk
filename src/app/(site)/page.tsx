@@ -10,8 +10,12 @@ import { Questions } from '@/sections/Questions';
 
 import common from '@/data/common.json';
 
-import { Conditions } from '@/components/common/Conditions';
-import { ModalTestComponent } from '@/components/ui/Modal/ModalTestComponent';
+import {
+  ModalTestComponent,
+  ModalTestERRORComponent,
+  ModalTestSUCCESSComponent,
+  ModalTestCONDITIONSComponents,
+} from '@/components/ui/Modal';
 // import { Modal } from '@/components/ui/Modal';
 
 export default function Home() {
@@ -25,7 +29,6 @@ export default function Home() {
       <Values />
       <Services />
       <Questions />
-      <Conditions />
       <Button tag="a" accent={true} className="font-semibold">
         {common.buttonsText.v1}
       </Button>
@@ -41,6 +44,9 @@ export default function Home() {
       {/* <BurgerMenuEmulator /> */}
       <Logo path="footer" onClick={onLogoClick} className="ml-7" />
       <Socials className="mt-5" />
+      <ModalTestERRORComponent />
+      <ModalTestSUCCESSComponent />
+      <ModalTestCONDITIONSComponents />
     </>
   );
 }

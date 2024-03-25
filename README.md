@@ -179,8 +179,8 @@ the NavbarLink is clicked.
 
 - #### component Modal
 
-| Prop       | Default | Description                                                     |
-| ---------- | ------- | --------------------------------------------------------------- |
-| `type`     | --      | required, `conditions`, `sucess`, `error`, type of notification |
-| `onClose`  | --      | required, `() => void`, add the function of closing the modal   |
-| `children` | --      | optional, `React.ReactNode`, React components                   |
+| Prop        | Default | Description                                                   |
+| ----------- | ------- | ------------------------------------------------------------- |
+| `onClose`   | --      | required, `() => void`, add the function of closing the modal |
+| `children`  | --      | optional, `React.ReactNode`, React components                 |
+| `className` | --      | optional, `string`, adds custom css class to the Modal        |
