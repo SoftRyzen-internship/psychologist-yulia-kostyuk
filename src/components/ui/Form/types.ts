@@ -6,12 +6,12 @@ export type FormData = {
 
 export type FormInputProps = {
   textarea: boolean;
+  required: boolean;
   label: string;
   inputName: string;
   register: UseFormRegister<FormData>;
   errors?: FieldErrors<FormData>;
   placeholder: string;
-  required: boolean;
   pattern?: ValidationRule<RegExp>;
   minLength?: ValidationRule<number>;
 };

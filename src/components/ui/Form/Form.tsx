@@ -18,6 +18,7 @@ export const Form = () => {
     setValue,
     formState: { errors },
   } = useForm<FormData>();
+  console.log(errors);
 
   useFormPersist('FormData', {
     watch,
@@ -38,14 +39,13 @@ export const Form = () => {
         <div key={input.label}>
           <FormInput
             textarea={input.textarea}
+            required={input.required}
             inputName={input.inputName}
             label={input.label}
             placeholder={input.placeholder}
             register={register}
             errors={errors}
             pattern={new RegExp(input.pattern)}
-            required={false}
-            minLength={10}
           />
         </div>
       ))}

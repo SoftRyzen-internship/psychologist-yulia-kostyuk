@@ -3,20 +3,27 @@
   "inputs": [
     {
       "textarea": false,
+      "required": true,
+      "error": "Будь ласка, введіть коректне ім'я",
       "label": "Ваше ім'я",
       "inputName": "name",
       "placeholder": "Анастасія",
-      "pattern": "^[А-Яа-яёЁЇїІіЄєҐґ]+$"
+      "pattern": "^[А-Яа-яёЁЇїІіЄєҐґ]+$",
+      "minLength": 3
     },
     {
       "textarea": false,
+      "required": true,
+      "error": "Будь ласка, введіть коректний номер телефону",
       "label": "Номер телефону",
       "inputName": "phone",
       "placeholder": "+380000000000",
-      "pattern": "/^[0-9\\s()]+$/"
+      "pattern": "/^[0-9\\s()]+$/",
+      "minLength": 10
     },
     {
       "textarea": true,
+      "required": false,
       "label": "Коментар",
       "inputName": "message",
       "placeholder": "Напишіть, яка проблема вас турбує",

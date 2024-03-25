@@ -8,6 +8,7 @@ export const FormInput: React.FC<FormInputProps> = ({
   inputName,
   placeholder,
   required,
+  errors,
   register,
   pattern,
   minLength,
