@@ -27,7 +27,7 @@ export const BurgerMenu: React.FC<IBurgerMenuProps> = ({ onClose }) => {
   };
 
   return (
-    <div className="and fixed bottom-0 right-0 z-10 h-full w-full overscroll-none bg-backdrop backdrop-blur-xl xl:hidden">
+    <div className="fixed bottom-0 right-0 z-10 h-full w-full overscroll-none bg-backdrop backdrop-blur-xl xl:hidden">
       <div className="mx-auto flex h-lvh w-full flex-col  bg-mainBcg">
         <div className="flex justify-between px-5 py-[22px] md:px-8 md:py-[26px]">
           <Logo path="header" onClick={onClose} />
@@ -39,7 +39,7 @@ export const BurgerMenu: React.FC<IBurgerMenuProps> = ({ onClose }) => {
             <CloseIcon width={14} height={14} />
           </button>
         </div>
-        <div className=" flex h-full flex-col justify-between px-8 py-10 md:py-[60px]">
+        <div className="flex h-full flex-col justify-between px-8 py-10 md:py-[60px]">
           <nav className="mb-auto self-start">
             <Navbar variant="mobile-menu" onClick={handleLinkClick} />
           </nav>
