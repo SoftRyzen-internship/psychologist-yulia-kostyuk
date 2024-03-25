@@ -34,7 +34,7 @@ export const ValueItem: React.FC<ValueItemProps> = ({ value }) => {
         <h3 className="mb-3 font-tenor text-xl font-normal tracking-[0.5px] text-accent md:mb-4 xl:mb-6">
           {value.subTitle}
         </h3>
-        <p className="text">{value.description}</p>
+        <p className="text font-montserrat">{value.description}</p>
       </div>
     </div>
   );
