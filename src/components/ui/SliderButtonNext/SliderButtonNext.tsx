@@ -4,8 +4,6 @@ import IconSliderNext from '@/../public/icons/arrow.svg';
 
 import data from '@/data/common.json';
 
-import styles from './SliderButtonNext.module.css';
-
 export const SliderButtonNext = () => {
   const swiper = useSwiper();
   const { ariaLabel } = data.questionsSection;
@@ -14,10 +12,14 @@ export const SliderButtonNext = () => {
     <button
       type="button"
       aria-label={ariaLabel}
-      className="ml-auto mr-0 block transition xl:mt-[58px]"
+      className="ml-auto mr-0 block xl:mt-[58px]"
       onClick={() => swiper.slideNext()}
     >
-      <IconSliderNext width={32} height={32} className={styles.icon} />
+      <IconSliderNext
+        width={32}
+        height={32}
+        className="transition hover:stroke-2 focus:stroke-2"
+      />
     </button>
   );
 };

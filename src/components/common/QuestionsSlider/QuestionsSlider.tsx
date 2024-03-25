@@ -19,11 +19,11 @@ export const QuestionsSlider: React.FC<QuestionsSliderProps> = ({
             width={208}
             height={308}
             priority
-            className="transition hover:scale-[1.1]"
+            className="cursor-pointer transition hover:scale-[1.1]"
           />
         </div>
       </div>
-      <p className="caption ml-auto mr-auto w-[200px] text-center font-normal text-white xl:w-[250px] xl:text-[24px]">
+      <p className="caption ml-auto mr-auto w-[200px] text-center font-tenor font-normal text-white xl:w-[250px] xl:text-[24px]">
         {label}
       </p>
     </li>

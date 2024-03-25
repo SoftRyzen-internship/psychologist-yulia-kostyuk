@@ -25,7 +25,8 @@
     "react-hook-form-persist": "^3.0.0",
     "sanity": "^3.33.0",
     "styled-components": "^6.1.8",
-    "swiper": "^11.0.7"
+    "swiper": "^11.0.7",
+    "tailwind-scrollbar": "^3.1.0"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^14.1.3",
