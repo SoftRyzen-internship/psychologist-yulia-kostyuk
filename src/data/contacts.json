@@ -1,0 +1,28 @@
+{
+  "contactsTitle": "Контакти",
+  "inputs": [
+    {
+      "label": "Ваше ім'я",
+      "inputName": "name",
+      "placeholder": "Анастасія",
+      "pattern": "^[А-Яа-яёЁЇїІіЄєҐґ]+$"
+    },
+    {
+      "label": "Номер телефону",
+      "inputName": "phone",
+      "placeholder": "+380000000000",
+      "pattern": "/^[0-9\\s()]+$/"
+    }
+  ],
+  "textArea": {
+    "label": "Коментар",
+    "inputName": "message",
+    "placeholder": "Напишіть, яка проблема вас турбує"
+  },
+
+  "checkBox": {
+    "inputName": "checked",
+    "agreeDeclaration": "Я погоджуюся на обробку моїх персональних даних відповідно до ",
+    "conditionsLink": "Політики конфіденційності"
+  }
+}
