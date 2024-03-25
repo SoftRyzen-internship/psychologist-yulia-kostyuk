@@ -1,14 +1,10 @@
 import React from 'react';
-import EducationData from '@/components/common/Education/types';
-import { EducationItem } from '@/components/common/Education';
+import { EducationItem } from '@/components/common/EducationItem';
+import { EducationProps } from '@/components/common/EducationItem/types';
 import { Button } from '@/components/ui/Button';
 import common from '@/data/common.json';
 
-interface Props {
-  educationData: EducationData;
-}
-
-export const Education: React.FC<Props> = ({ educationData }) => {
+export const Education: React.FC<EducationProps> = ({ educationData }) => {
   return (
     <section className="w-full pb-[60px] pt-10 md:pb-[120px] md:pt-[60px] xl:pb-[140px] xl:pt-20">
       <div className="container">
@@ -25,7 +21,16 @@ export const Education: React.FC<Props> = ({ educationData }) => {
               {common.buttonsText.v2}
             </Button>
           </div>
-          <EducationItem educationData={educationData} />
+          <ul>
+            {educationData.education.map((item, index) => (
+              <EducationItem
+                key={item.id}
+                item={item}
+                index={index}
+                isLast={index === educationData.education.length - 1}
+              />
+            ))}
+          </ul>
         </div>
       </div>
     </section>
