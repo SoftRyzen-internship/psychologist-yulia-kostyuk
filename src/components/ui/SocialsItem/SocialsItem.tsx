@@ -1,3 +1,5 @@
+import React from 'react';
+
 import Telegram from '@/../public/icons/telegram.svg';
 import Instagram from '@/../public/icons/instagram.svg';
 import Facebook from '@/../public/icons/facebook.svg';
@@ -5,12 +7,12 @@ import Facebook from '@/../public/icons/facebook.svg';
 import { SocialsItemProps } from './types';
 
 export const SocialsItem: React.FC<SocialsItemProps> = ({
-  id,
+  name,
   href,
   ariaL,
 }) => {
   return (
-    <li key={id}>
+    <li key={name}>
       <a
         href={href}
         aria-label={ariaL}
@@ -18,9 +20,9 @@ export const SocialsItem: React.FC<SocialsItemProps> = ({
         rel="noopener noreferrer nofollow"
         className="transition hover:text-hover focus-visible:text-pressed"
       >
-        {id === 1 && <Telegram className="h-8 w-8" />}
-        {id === 2 && <Instagram className="h-8 w-8" />}
-        {id === 3 && <Facebook className="h-8 w-8" />}
+        {name === 'telegram' && <Telegram className="h-8 w-8" />}
+        {name === 'instagram' && <Instagram className="h-8 w-8" />}
+        {name === 'facebook' && <Facebook className="h-8 w-8" />}
       </a>
     </li>
   );
