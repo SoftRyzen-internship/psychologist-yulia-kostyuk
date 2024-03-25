@@ -55,6 +55,7 @@ const config: Config = {
         error: '#CB3D3D',
         hover: '#2C4228',
         pressed: '#21331F',
+        border: 'rgba(57, 87, 52, 0.30)',
       },
     },
   },

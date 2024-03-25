@@ -33,7 +33,9 @@ export function MyServices() {
               <h3 className="section-subtitle mb-4 font-tenor text-accent">
                 {service.title}
               </h3>
-              <p className="opacity-40">{service.location}</p>
+              <p className="text font-montserrat text-text opacity-80">
+                {service.location}
+              </p>
             </div>
             <Button
               tag="a"
