@@ -27,6 +27,7 @@ export const QuestionsSwiper = () => {
         },
         1280: {
           slidesPerView: 3,
+          spaceBetween: 40,
         },
       }}
     >

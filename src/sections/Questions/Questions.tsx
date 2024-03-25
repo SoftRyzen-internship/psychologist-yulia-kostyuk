@@ -7,7 +7,7 @@ export const Questions = () => {
 
   return (
     <section className="w-full bg-bgQuestions pb-6 pt-[80px] md:pb-[40px] md:pt-[120px] xl:pb-[80px] xl:pt-40">
-      <div className="container xl:flex xl:items-start xl:gap-8">
+      <div className="container xl:flex xl:items-start xl:gap-10">
         <div className="md:flex md:items-center md:justify-between xl:h-[300px] xl:flex-col xl:gap-[190px] notXL:mb-[60px]">
           <div className="section-title flex flex-col items-start font-tenor text-white smOnly:mb-8">
             <h2>{title.label1}</h2>
