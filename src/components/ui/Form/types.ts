@@ -5,6 +5,7 @@ export type FormData = {
 };
 
 export type FormInputProps = {
+  textarea: boolean;
   label: string;
   inputName: string;
   register: UseFormRegister<FormData>;

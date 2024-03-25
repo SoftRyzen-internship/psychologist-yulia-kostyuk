@@ -2,23 +2,27 @@
   "contactsTitle": "Контакти",
   "inputs": [
     {
+      "textarea": false,
       "label": "Ваше ім'я",
       "inputName": "name",
       "placeholder": "Анастасія",
       "pattern": "^[А-Яа-яёЁЇїІіЄєҐґ]+$"
     },
     {
+      "textarea": false,
       "label": "Номер телефону",
       "inputName": "phone",
       "placeholder": "+380000000000",
       "pattern": "/^[0-9\\s()]+$/"
+    },
+    {
+      "textarea": true,
+      "label": "Коментар",
+      "inputName": "message",
+      "placeholder": "Напишіть, яка проблема вас турбує",
+      "pattern": "."
     }
   ],
-  "textArea": {
-    "label": "Коментар",
-    "inputName": "message",
-    "placeholder": "Напишіть, яка проблема вас турбує"
-  },
 
   "checkBox": {
     "inputName": "checked",

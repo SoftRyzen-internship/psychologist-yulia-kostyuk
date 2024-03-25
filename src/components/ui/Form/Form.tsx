@@ -30,12 +30,13 @@ export const Form = () => {
 
   return (
     <form
-      className="flex flex-col px-5 py-10"
+      className=" flex flex-col px-5 py-10 md:px-8 md:py-12 xl:w-[592px]"
       onSubmit={handleSubmit(onSubmit)}
     >
       {contacts.inputs.map(input => (
         <div key={input.label}>
           <FormInput
+            textarea={input.textarea}
             inputName={input.inputName}
             label={input.label}
             placeholder={input.placeholder}
@@ -47,15 +48,14 @@ export const Form = () => {
           />
         </div>
       ))}
-
-      <textarea
-        placeholder={contacts.textArea.placeholder}
-        // register={register}
-      />
-      <Button tag="button" accent={true}>
+      <CheckBox register={register} />
+      <Button
+        tag="button"
+        accent={true}
+        className="w-full md:w-[185px] smOnly:mx-auto"
+      >
         {common.buttonsText.v1}
       </Button>
-      <CheckBox register={register} />
     </form>
   );
 };
