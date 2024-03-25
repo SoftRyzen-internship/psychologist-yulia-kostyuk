@@ -35,7 +35,7 @@ export const Conditions = () => {
           <h3 className="section-subtitle mb-6 ml-auto mr-auto text-center font-tenor text-accent md:w-[450px] xl:mb-[60px] xl:w-[639px] xl:tracking-[0.5px]">
             <PortableText value={condition.title} />
           </h3>
-          <div className="scrollbar-thumb-custom scrollbar-track-custom-light scrollbar scrollbar-thumb-[#395734] scrollbar-track-slate-300 overflow-x-hidden overflow-y-scroll">
+          <div className="scrollbar-thumb-custom scrollbar-track-custom-light overflow-x-hidden overflow-y-scroll scrollbar scrollbar-track-slate-300 scrollbar-thumb-[#395734]">
             <div className={conditionsClasses}>
               <PortableText key={index} value={condition.description} />
             </div>
