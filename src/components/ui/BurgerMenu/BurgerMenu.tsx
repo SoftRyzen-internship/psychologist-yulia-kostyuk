@@ -26,7 +26,7 @@ export const BurgerMenu: React.FC<IBurgerMenuProps> = ({ onClose }) => {
   };
 
   return (
-    <div className="fixed bottom-0 right-0 z-10 h-full w-full overscroll-none bg-backdrop backdrop-blur-xl xl:hidden">
+    <div className="z-100 fixed bottom-0 right-0 h-full w-full overscroll-none bg-backdrop backdrop-blur-xl xl:hidden">
       <div className="mx-auto flex h-lvh w-full flex-col  bg-mainBcg">
         <div className="flex justify-between px-5 py-[22px] md:px-8 md:py-[26px]">
           <Logo path="header" onClick={onClose} />

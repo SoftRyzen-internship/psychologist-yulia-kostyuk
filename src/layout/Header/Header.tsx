@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { BurgerMenu } from '@/components/ui/BurgerMenu';
-import { BurgerMenuIcon } from '@/../public/icons';
+import BurgerMenuIcon from '@/../public/icons/burger-menu.svg';
 import { Navbar } from '@/components/ui/Navbar';
 import { Logo } from '@/components/ui/Logo';
 import common from '@/data/common.json';
@@ -26,16 +26,16 @@ export const Header = () => {
   return (
     <header className="w-full">
       <div className="container">
-        <div className="relative flex items-end gap-24 pt-3.5">
+        <div className="flex items-end gap-24 pt-3.5">
           <Logo path="header" onClick={onLogoClick} />
-          <Navbar variant="header" />
+          {/* <Navbar variant="header" /> */}
           <button
             type="button"
-            className="ml-auto block xl:hidden"
+            className="block"
             aria-label={common.layout['aria-label'].burger}
             onClick={handleOpen}
           >
-            <BurgerMenuIcon />
+            <BurgerMenuIcon width={32} height={32} />
           </button>
           {isOpen && <BurgerMenu onClose={handleClose} />}
         </div>

@@ -8,7 +8,7 @@ import common from '@/data/common.json';
 
 export const Hero = () => {
   return (
-    <section className="w-full">
+    <section className="relative w-full">
       <div className="container">
         <div className="border-b-2 border-solid border-accent">
           <div className="flex gap-5 notXL:flex-col notXL:gap-0">
