@@ -17,9 +17,6 @@
     typing 1s steps(10, end),
     textShine 2s ease-in-out infinite alternate;
 }
-.subtitle {
-  animation: opacity 4s ease-in-out infinite;
-}
 
 @keyframes typing {
   from {
@@ -29,17 +26,7 @@
     width: 100%;
   }
 }
-@keyframes opacity {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
+
 @keyframes textShine {
   0% {
     background-position: 0% 50%;

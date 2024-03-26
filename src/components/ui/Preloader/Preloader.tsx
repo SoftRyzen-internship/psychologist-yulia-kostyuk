@@ -30,9 +30,7 @@ export const Preloader = () => {
         >
           {logo.label}
         </p>
-        <p
-          className={classnames(s.subtitle, 'text-center uppercase text-text')}
-        >
+        <p className="text-center uppercase text-text">
           {logo.preloaderSubtitle}
         </p>
       </div>
