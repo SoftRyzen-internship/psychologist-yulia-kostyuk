@@ -31,20 +31,6 @@
   }
 }
 
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: inherit;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #395734;
-  border-radius: 50px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: #2c4228;
-  cursor: pointer;
+html {
+  scroll-behavior: smooth;
 }

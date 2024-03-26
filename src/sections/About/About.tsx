@@ -5,7 +5,7 @@ import { AboutList } from '@/components/AboutList';
 
 export const About = () => {
   return (
-    <section className="w-full py-20 md:py-[120px] xl:py-40">
+    <section id="about" className="w-full py-20 md:py-[120px] xl:py-40">
       <div className="container">
         <div className="flex flex-col md:flex-row mdOnly:gap-8">
           <div className="mr-0 block h-[360px] self-stretch overflow-hidden md:h-full md:w-[240px] xl:mr-[136px] xl:w-[488px] smOnly:mb-10">
