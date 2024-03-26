@@ -1,4 +1,4 @@
-export interface Value {
+export interface ValueProps {
   id?: number;
   name?: string;
   title?: string;
@@ -7,5 +7,5 @@ export interface Value {
 }
 
 export interface ValueItemProps {
-  value: Value;
+  value: ValueProps;
 }
