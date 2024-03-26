@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { classnames } from '@/utils/classnames';
-import { navLinks } from '@/data/header';
+import navLinks from '@/data/header.json';
 import { NavbarLink } from '../NavbarLink';
 import { NavbarProps } from '@/components/ui/Navbar/types';
 
