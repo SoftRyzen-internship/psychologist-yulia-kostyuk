@@ -19,26 +19,20 @@ export const Header = () => {
     document.body.style.overflow = 'auto';
   };
 
-  const onLogoClick = () => {
-    console.log('click logo');
-  };
-
   return (
     <header className="w-full">
-      <div className="container">
-        <div className="flex items-end gap-24 pt-3.5">
-          <Logo path="header" onClick={onLogoClick} />
-          {/* <Navbar variant="header" /> */}
-          <button
-            type="button"
-            className="block"
-            aria-label={common.layout['aria-label'].burger}
-            onClick={handleOpen}
-          >
-            <BurgerMenuIcon width={32} height={32} />
-          </button>
-          {isOpen && <BurgerMenu onClose={handleClose} />}
-        </div>
+      <div className="container flex items-center pb-5 pt-5 md:mt-6 md:pb-6 xl:gap-[100px] notXL:justify-between">
+        <Logo path="header" onClick={handleClose} />
+        <Navbar variant="header" className="smOnly:hidden mdOnly:hidden" />
+        <button
+          type="button"
+          className="block xl:hidden"
+          aria-label={common.layout['aria-label'].burger}
+          onClick={handleOpen}
+        >
+          <BurgerMenuIcon width={32} height={32} />
+        </button>
+        {isOpen && <BurgerMenu onClose={handleClose} />}
       </div>
     </header>
   );

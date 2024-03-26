@@ -8,56 +8,45 @@ import common from '@/data/common.json';
 
 export const Hero = () => {
   return (
-    <section className="relative w-full">
-      <div className="container">
-        <div className="border-b-2 border-solid border-accent">
-          <div className="flex gap-5 notXL:flex-col notXL:gap-0">
-            <div className="flex w-[55%] flex-col notXL:ml-0 notXL:w-full">
-              <div className="z-10 flex flex-col notXL:max-w-full">
-                <p className="tracking-5 mb-4 text-base font-medium uppercase leading-6 text-text sm:mt-[78px] md:mt-[122px] xl:mt-[230px] ">
-                  {hero.pretitle}
-                </p>
-                <h1 className="font-tenor font-normal text-accent sm:pb-12 sm:text-large/[48px] md:pb-14 md:text-7xl/[84px] xl:pb-16">
-                  {hero.title}
-                </h1>
-                <div>
-                  <Button
-                    tag="a"
-                    accent={true}
-                    className="w-full font-semibold sm:mb-20 md:mb-[122px] md:w-auto"
-                  >
-                    {common.buttonsText.v1}
-                  </Button>
-                </div>
-              </div>
-            </div>
-            <div className="ml-auto flex w-[45%] notXL:ml-0 notXL:w-full">
-              <Image
-                className="w-full md:self-stretch notXL:max-w-full"
-                loading="lazy"
-                src="/images/desktop/hero-1-desk@2x.webp"
-                width={600}
-                height={900}
-                alt="main photo"
-              />
-            </div>
+    <>
+      <section className="w-full pb-[78px] pt-[78px] md:pb-[122px] md:pt-[122px] xl:pb-[262px] xl:pt-[155px]">
+        <div className="container">
+          <div className="">
+            <p className="text mb-4 font-medium uppercase not-italic text-text">
+              {hero.pretitle}
+            </p>
+            <h1 className="mb-12 font-tenor text-large/[48px] font-normal tracking-[0.5] text-accent md:mb-14 md:text-7xl/[84px] xl:w-[600px] xl:pb-16">
+              {hero.title}
+            </h1>
+            <Button
+              tag="a"
+              accent={true}
+              className="w-full font-semibold md:w-[198px]"
+            >
+              {common.buttonsText.v1}
+            </Button>
           </div>
-        </div>
 
-        <div className="flex flex-col">
-          <div className="flex items-center justify-center self-center sm:mt-6 md:mt-10 xl:mt-14">
-            <ArrowDown className="sm:h-9 sm:w-9 md:h-11 md:w-11 xl:h-16 xl:w-16" />
-          </div>
           <Image
-            className="mt-14 h-auto w-full sm:mt-5 md:mt-9 xl:mt-14 xl:max-w-full"
-            loading="lazy"
-            src="/images/desktop/hero-2-desk@2x.webp"
-            width={440}
-            height={1440}
-            alt="background image"
+            src={'/images/desktop/hero-1-desk@2x.webp'}
+            alt={hero.altPhoto}
+            width={600}
+            height={900}
+            priority
+            className="right-0 top-0 xl:absolute notXL:hidden"
           />
         </div>
+      </section>
+
+      <div className="relative xl:mt-[60px]">
+        <div className="absolute left-0 top-[-11.5%] h-[2px] w-[100%] bg-accent notXL:hidden"></div>
+        <div className="h-[268px] w-full bg-[url('/images/mobile/hero-1-mob@2x.webp')] bg-cover bg-center bg-no-repeat sm:h-[480px] sm:bg-[url('/images/tablet/hero-1-tab@2x.webp')] xl:hidden"></div>
+        <ArrowDown
+          aria-label={hero.ariaLabelIcon}
+          className="ml-auto mr-auto h-[36px] w-[36px] md:h-[44px] md:w-[44px] xl:mb-12 xl:h-[52px] xl:w-[52px] mdOnly:mb-9 mdOnly:mt-10 notXL:mb-5 notXL:mt-6"
+        />
+        <div className="center h-[248px] w-full bg-[url('/images/mobile/hero-2-mob@2x.webp')] bg-cover bg-no-repeat sm:h-[440px] sm:bg-[url('/images/tablet/hero-2-tab@2x.webp')] xl:bg-[url('/images/desktop/hero-2-desk@2x.webp')]"></div>
       </div>
-    </section>
+    </>
   );
 };
