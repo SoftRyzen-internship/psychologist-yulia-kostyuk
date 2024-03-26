@@ -17,7 +17,10 @@ export const Education = () => {
             </h2>
             <Button
               tag="a"
+              href={educationData.link}
               accent={false}
+              target={educationData.target}
+              rel={educationData.rel}
               className="flex max-w-full justify-center text-sm font-normal md:max-w-[170px] md:items-center md:justify-center xl:max-w-[187px] xl:text-base"
             >
               {common.buttonsText.v2}

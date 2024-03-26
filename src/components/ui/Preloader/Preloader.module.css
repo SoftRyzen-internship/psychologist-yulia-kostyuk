@@ -1,0 +1,37 @@
+.gradient {
+  background: linear-gradient(
+    to right,
+    #30a628 20%,
+    #2b8f38 30%,
+    #116b0c 70%,
+    #04490f 80%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  background-size: 500% auto;
+  animation:
+    typing 1s steps(10, end),
+    textShine 2s ease-in-out infinite alternate;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes textShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}

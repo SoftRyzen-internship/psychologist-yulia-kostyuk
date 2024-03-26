@@ -5,7 +5,7 @@ import { getServices } from '@/../sanity/request/servicesRequest';
 import common from '@/data/common.json';
 import { Button } from '@/components/ui/Button';
 import { Service } from './types';
-import ServiceItem from '../ServiceItem/ServicesItem';
+import { ServiceItem } from '../ServiceItem/ServiceItem';
 
 export function ServicesList() {
   const [services, setServices] = useState<Service[]>([]);

@@ -1,6 +1,6 @@
 import React from 'react';
 import myValues from '@/data/myValues.json';
-import { Value } from '@/components/common/ValueItem/types';
+import { ValueProps } from '@/components/common/ValueItem/types';
 import { ValueItem } from '@/components/common/ValueItem/ValueItem';
 
 export const Values: React.FC = () => {
@@ -12,7 +12,7 @@ export const Values: React.FC = () => {
             {myValues.title}
           </h2>
           <ul className="grid grid-cols-1 gap-8 xl:grid-cols-3 ">
-            {myValues.values.map((value: Value) => (
+            {myValues.values.map((value: ValueProps) => (
               <ValueItem key={value.id} value={value} />
             ))}
           </ul>

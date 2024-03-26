@@ -1,11 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
 import about from '@/data/about.json';
-import { AboutList } from '@/components/AboutList';
+import { AboutList } from '@/components/common/AboutList';
 
 export const About = () => {
   return (
-    <section className="w-full py-20 md:py-[120px] xl:py-40">
+    <section id="about" className="w-full py-20 md:py-[120px] xl:py-40">
       <div className="container">
         <div className="flex flex-col md:flex-row mdOnly:gap-8">
           <div className="mr-0 block h-[360px] self-stretch overflow-hidden md:h-full md:w-[240px] xl:mr-[136px] xl:w-[488px] smOnly:mb-10">
@@ -21,7 +21,7 @@ export const About = () => {
             <h2 className="section-subtitle mb-10 font-tenor text-accent md:mb-12 xl:mb-0">
               {about.titleText}
             </h2>
-            <AboutList services={about.services} />
+            <AboutList aboutServices={about.services} />
           </div>
         </div>
       </div>
