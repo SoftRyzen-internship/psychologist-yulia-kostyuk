@@ -21,12 +21,12 @@ export const Header = () => {
 
   return (
     <header className="w-full">
-      <div className="container flex items-center pb-5 pt-5 md:mt-6 md:pb-6 xl:gap-[100px] notXL:justify-between">
+      <div className="container flex items-center py-[22px] xl:gap-[100px] notXL:justify-between">
         <Logo path="header" onClick={handleClose} />
         <Navbar variant="header" className="smOnly:hidden mdOnly:hidden" />
         <button
           type="button"
-          className="block xl:hidden"
+          className="block transition hover:scale-110 hover:text-hover focus-visible:text-pressed xl:hidden"
           aria-label={common.layout['aria-label'].burger}
           onClick={handleOpen}
         >

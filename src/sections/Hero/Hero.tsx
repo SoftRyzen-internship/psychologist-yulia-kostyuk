@@ -9,13 +9,13 @@ import common from '@/data/common.json';
 export const Hero = () => {
   return (
     <>
-      <section className="w-full pb-[78px] pt-[78px] md:pb-[122px] md:pt-[122px] xl:pb-[262px] xl:pt-[155px]">
+      <section className="w-full pb-[78px] pt-[78px] md:pb-[122px] md:pt-[122px] xl:pb-[262px] xl:pt-[234px]">
         <div className="container">
           <div className="">
-            <p className="text mb-4 font-medium uppercase not-italic text-text">
+            <p className="text mb-4 font-montserrat font-medium uppercase not-italic text-text">
               {hero.pretitle}
             </p>
-            <h1 className="mb-12 font-tenor text-large/[48px] font-normal tracking-[0.5] text-accent md:mb-14 md:text-7xl/[84px] xl:w-[600px] xl:pb-16">
+            <h1 className="mb-12 font-tenor text-large/[48px] font-normal tracking-[0.5] text-accent md:mb-14 md:text-7xl/[84px] xl:mb-16 xl:w-[600px]">
               {hero.title}
             </h1>
             <Button
