@@ -1,10 +1,10 @@
 import React from 'react';
-import { ServiceProps, Service } from './types';
+import { AboutServiceProps, AboutService } from './types';
 
-export const AboutList: React.FC<ServiceProps> = ({ services }) => {
+export const AboutList: React.FC<AboutServiceProps> = ({ aboutServices }) => {
   return (
     <ul className="flex flex-col gap-5 xl:gap-7">
-      {services.map((service: Service) => {
+      {aboutServices.map((service: AboutService) => {
         return (
           <li
             key={service.id}
