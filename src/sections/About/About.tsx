@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import about from '@/data/about.json';
-import { AboutList } from '@/components/AboutList';
+import { AboutList } from '@/components/common/AboutList';
 
 export const About = () => {
   return (
@@ -21,7 +21,7 @@ export const About = () => {
             <h2 className="section-subtitle mb-10 font-tenor text-accent md:mb-12 xl:mb-0">
               {about.titleText}
             </h2>
-            <AboutList services={about.services} />
+            <AboutList aboutServices={about.services} />
           </div>
         </div>
       </div>
