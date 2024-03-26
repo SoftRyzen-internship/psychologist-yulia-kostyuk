@@ -19,11 +19,7 @@ export const Logo: React.FC<LogoProps> = ({ path, onClick, className }) => {
   );
 
   return (
-    <Link
-      href="/"
-      onClick={onClick}
-      className={logoClasses}
-    >
+    <Link href="/" onClick={onClick} className={logoClasses}>
       {logo.label}
     </Link>
   );
