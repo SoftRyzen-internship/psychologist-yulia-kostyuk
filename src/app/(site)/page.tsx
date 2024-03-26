@@ -35,7 +35,6 @@ export default function Home() {
       <ModalTestComponent />
       <ModalTestERRORComponent />
       <ModalTestSUCCESSComponent />
-      <ModalTestCONDITIONSComponents />
     </>
   );
 }

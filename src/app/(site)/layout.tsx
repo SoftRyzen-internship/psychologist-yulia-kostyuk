@@ -38,7 +38,7 @@ export default function RootLayout({
       >
         <Header />
         <main className="flex-grow">{children}</main>
-        <Footer />
+        <Footer name={''} href={''} ariaL={''} />
       </body>
     </html>
   );
