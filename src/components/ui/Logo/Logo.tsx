@@ -21,7 +21,6 @@ export const Logo: React.FC<LogoProps> = ({ path, onClick, className }) => {
   return (
     <Link
       href="/"
-      aria-label={logo.ariaLabel}
       onClick={onClick}
       className={logoClasses}
     >
