@@ -18,7 +18,6 @@ export const Form = () => {
     setValue,
     formState: { errors },
   } = useForm<FormData>();
-  console.log(errors);
 
   useFormPersist('FormData', {
     watch,
@@ -35,21 +34,17 @@ export const Form = () => {
       className=" flex flex-col px-5 py-10 md:px-8 md:py-12 xl:w-[592px]"
       onSubmit={handleSubmit(onSubmit)}
     >
-      {contacts.inputs.map(input => (
-        <div key={input.label}>
+      {contacts.inputs.map(item => (
+        <div key={item.name.label}>
           <FormInput
-            textarea={input.textarea}
-            required={input.required}
-            inputName={input.inputName}
-            label={input.label}
-            placeholder={input.placeholder}
+            textarea={item.name.textarea}
+            config={item.name}
             register={register}
             errors={errors}
-            pattern={new RegExp(input.pattern)}
           />
         </div>
       ))}
-      <CheckBox register={register} />
+      <CheckBox register={register} errors={errors} />
       <Button
         tag="button"
         accent={true}

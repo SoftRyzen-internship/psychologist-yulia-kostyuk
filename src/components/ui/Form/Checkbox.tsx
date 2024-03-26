@@ -1,13 +1,15 @@
 import React from 'react';
+import { classnames } from '@/utils/classnames';
 import { CheckBoxProps } from './types';
 import contacts from '@/data/contacts.json';
 
-export const CheckBox: React.FC<CheckBoxProps> = ({ register }) => {
+export const CheckBox: React.FC<CheckBoxProps> = ({ register, errors }) => {
   const handleAgreementClick = () => {
     console.log('agreement');
   };
+
   return (
-    <div className="lg:pt-[10px] relative pb-6">
+    <div className="lg:pt-[10px] flex items-start pb-6">
       <input
         type="checkbox"
         id="agreement"
@@ -15,7 +17,10 @@ export const CheckBox: React.FC<CheckBoxProps> = ({ register }) => {
         {...register('checked', {
           required: true,
         })}
-        className="bg-red-100 p-1 accent-[#D6D0C5]"
+        className={classnames(
+          'relative top-[3px] appearance-none border-2 border-[#91897F] bg-mainBcg p-1.5 checked:bg-accent',
+          errors?.checked && 'border-error',
+        )}
       />
       <label
         htmlFor="agreement"
@@ -30,6 +35,7 @@ export const CheckBox: React.FC<CheckBoxProps> = ({ register }) => {
           {contacts.checkBox.conditionsLink}
         </button>
       </label>
+      {/* {errors?.checked && <p>error</p>} */}
     </div>
   );
 };

@@ -5,17 +5,43 @@ export type FormData = {
 };
 
 export type FormInputProps = {
+  config: FormInputsConfig;
   textarea: boolean;
-  required: boolean;
-  label: string;
-  inputName: string;
   register: UseFormRegister<FormData>;
   errors?: FieldErrors<FormData>;
-  placeholder: string;
   pattern?: ValidationRule<RegExp>;
   minLength?: ValidationRule<number>;
 };
 
+export type FormInputsConfig = {
+  name: string;
+  label: string;
+  placeholder?: string;
+  validation?: validationInput;
+};
+
+export type validationInput = {
+  required?: validationRequired;
+  pattern?: validationPattern;
+  minLength?: validationLength; //--
+};
+
+export type validationRequired = {
+  value: boolean;
+  message: string;
+};
+
+export type validationPattern = {
+  value: string;
+  message: string;
+};
+
+export type validationLength = {
+  value: number;
+  message: string;
+};
+
 export type CheckBoxProps = {
   register: UseFormRegister<FormData>;
+  errors?: FieldErrors<FormData>;
 };

@@ -2,32 +2,68 @@
   "contactsTitle": "Контакти",
   "inputs": [
     {
-      "textarea": false,
-      "required": true,
-      "error": "Будь ласка, введіть коректне ім'я",
-      "label": "Ваше ім'я",
-      "inputName": "name",
-      "placeholder": "Анастасія",
-      "pattern": "^[А-Яа-яёЁЇїІіЄєҐґ]+$",
-      "minLength": 3
+      "name": {
+        "textarea": false,
+        "error.message": "Будь ласка, введіть коректне ім'я",
+        "label": "Ваше ім'я",
+        "name": "name",
+        "placeholder": "Анастасія",
+        "validation": {
+          "required": {
+            "value": true,
+            "message": "Будь ласка, введіть своє ім'я"
+          },
+          "pattern": {
+            "value": "^[А-Яа-яёЁЇїІіЄєҐґ]+$",
+            "message": "Будь ласка, введіть коректне ім'я"
+          },
+          "minLength": {
+            "value": 3,
+            "message": "Будь ласка, введіть коректне ім'я"
+          }
+        }
+      }
     },
     {
-      "textarea": false,
-      "required": true,
-      "error": "Будь ласка, введіть коректний номер телефону",
-      "label": "Номер телефону",
-      "inputName": "phone",
-      "placeholder": "+380000000000",
-      "pattern": "/^[0-9\\s()]+$/",
-      "minLength": 10
+      "name": {
+        "textarea": false,
+        "error.message": "Будь ласка, введіть коректний номер телефону",
+        "label": "Номер телефону",
+        "name": "phone",
+        "placeholder": "+380000000000",
+        "validation": {
+          "required": {
+            "value": true,
+            "message": "Будь ласка, введіть свій номер телефону"
+          },
+          "pattern": {
+            "value": "[0-9]+",
+            "message": "Будь ласка, введіть коректний номер телефону"
+          },
+          "minLength": {
+            "value": 13,
+            "message": "Будь ласка, введіть коректне ім'я"
+          }
+        }
+      }
     },
     {
-      "textarea": true,
-      "required": false,
-      "label": "Коментар",
-      "inputName": "message",
-      "placeholder": "Напишіть, яка проблема вас турбує",
-      "pattern": "."
+      "name": {
+        "textarea": true,
+        "label": "Коментар",
+        "name": "message",
+        "placeholder": "Напишіть, яка проблема вас турбує",
+        "validation": {
+          "required": {
+            "value": false,
+            "message": "Будь ласка, введіть свій номер телефону"
+          },
+          "pattern": {
+            "value": ".",
+            "message": ""
+          }
+        }
+      }
     }
   ],
 
