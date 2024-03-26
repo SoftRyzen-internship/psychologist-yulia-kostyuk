@@ -25,7 +25,7 @@ export const Conditions = () => {
   }, []);
 
   const conditionsClasses = classnames(
-    `prose max-w-full font-montserrat overflow-x-hidden overflow-y-scroll text-[14px] h-[320px] md:h-[450px] xl:h-[380px] font-normal not-italic leading-5 tracking-[0.2px] text-text xl:text-[16px] xl:leading-6 ${styles.list} ${styles.scroll}`,
+    `scrollbar-thin scrollbar-thumb-[#395734] scrollbar-track-[#6A7A5F] overflow-y-scroll prose max-w-full font-montserrat overflow-x-hidden text-[14px] h-[320px] md:h-[450px] xl:h-[380px] font-normal not-italic leading-5 tracking-[0.2px] text-text xl:text-[16px] xl:leading-6 ${styles.list}`,
   );
 
   return (
