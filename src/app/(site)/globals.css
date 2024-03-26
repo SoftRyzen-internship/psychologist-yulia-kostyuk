@@ -30,7 +30,3 @@
     @apply transition-all duration-300 ease-out;
   }
 }
-
-html {
-  scroll-behavior: smooth;
-}
