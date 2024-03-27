@@ -31,9 +31,9 @@ export const ModalTestCONDITIONSComponents = () => {
       <button
         type="button"
         onClick={onClickOpenModal}
-        className="text block font-montserrat"
+        className="text duration-250 block transform font-montserrat transition hover:scale-110"
       >
-        Політики конфіденційності
+        Політика конфіденційності
       </button>
       {isOpen && (
         <Modal
