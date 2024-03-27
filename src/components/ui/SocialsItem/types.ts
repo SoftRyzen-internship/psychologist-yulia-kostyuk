@@ -1,5 +1,5 @@
 export type SocialsItemProps = {
-  id: number;
+  name: 'telegram' | 'instagram' | 'facebook';
   href: string;
   ariaL: string;
 };

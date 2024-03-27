@@ -1,7 +1,9 @@
+'use client';
+
 import React, { useEffect } from 'react';
 import { classnames } from '@/utils/classnames';
 
-import { CloseIcon } from '@/../public/icons';
+import CloseIcon from '@/../public/icons/close-icon.svg';
 import { ModalProps } from './types';
 
 import data from '@/data/common.json';
@@ -40,7 +42,7 @@ export function Modal({ onClose, children, className }: ModalProps) {
           onClick={onClose}
           className="duration-250 absolute right-[21px] top-[21px] transform transition hover:scale-110"
         >
-          <CloseIcon width={14} height={14} />
+          <CloseIcon width={24} height={24} />
         </button>
         {children}
       </div>

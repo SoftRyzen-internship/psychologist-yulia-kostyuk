@@ -25,11 +25,11 @@ export const Conditions = () => {
   }, []);
 
   const conditionsClasses = classnames(
-    `prose max-w-full font-montserrat text-[14px] font-normal not-italic leading-5 tracking-[0.2px] text-text xl:text-[16px] xl:leading-6 ${styles.list}`,
+    `scrollbar-thin scrollbar-thumb-[#395734] scrollbar-track-[#6A7A5F] overflow-y-scroll prose max-w-full font-montserrat overflow-x-hidden text-[14px] h-[320px] md:h-[450px] xl:h-[380px] font-normal not-italic leading-5 tracking-[0.2px] text-text xl:text-[16px] xl:leading-6 ${styles.list}`,
   );
 
   return (
-    <div className="h-[576px] overflow-y-auto overflow-x-hidden md:h-[952px] xl:h-[864px]">
+    <div className="h-[576px] md:h-[952px] xl:h-[864px]">
       {conditions.map((condition, index) => (
         <div key={index}>
           <h3 className="section-subtitle mb-6 ml-auto mr-auto text-center font-tenor text-accent md:w-[450px] xl:mb-[60px] xl:w-[639px] xl:tracking-[0.5px]">

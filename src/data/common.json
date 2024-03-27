@@ -3,11 +3,10 @@
     "title": "Юлія Костюк-Панель адміністратора",
     "description": "Панель адміністратора сайту Юлії Костюк"
   },
-
   "layout": {
     "logo": {
       "label": "Юлія Костюк",
-      "ariaLabel": "Посилання на головну сторінку"
+      "preloaderSubtitle": "Психолог"
     },
     "aria-label": {
       "burger": "Бургер меню",
@@ -17,43 +16,60 @@
       "services": "Мої послуги"
     }
   },
-
   "buttonsText": {
     "v1": "Записатися",
     "v2": "Мої сертифікати",
     "v3": "Відправити"
   },
-
   "socials": [
     {
-      "id": 1,
+      "name": "telegram",
       "path": "https://t.me/kostiuk_ulia",
       "ariaLabel": "посилання на телеграм"
     },
     {
-      "id": 2,
+      "name": "instagram",
       "path": "https://www.instagram.com/kostiuk_ulia_psy/",
       "ariaLabel": "посилання на інстаграм"
     },
     {
-      "id": 3,
+      "name": "facebook",
       "path": "https://www.facebook.com/profile.php?id=61553456342276",
       "ariaLabel": "посилання на фейсбук"
     }
   ],
-
   "notification": {
     "error": {
-      "title": "Сталася помилка",
-      "text": "На жаль, на сайті сталася помилка і Ваші дані не були відправлені. Спробуйте, будь ласка, пізніше."
+      "title": "Упс...",
+      "text": "Ваші дані не були відправлені. Спробуйте, будь ласка, пізніше."
     },
     "success": {
       "title": "Дякую за вашу заявку!",
       "text": "Ваші дані були успішно відправлені.\n Будь ласка, очікуйте: я зв'яжусь з вами найближчим часом для обговорення деталей."
     }
   },
-
   "modal": {
     "ariaLabel": "кнопка закриття модального вікна"
-  }
+  },
+  "questionsSection": {
+    "title": {
+      "label1": "Питання",
+      "label2": "з якими працюю"
+    },
+    "description": "Моя мета — допомогти вам у розвитку та підтримати в усіх аспектах особистісного зростання.",
+    "ariaLabel": "кнопка перегортання вправо на наступний слайд"
+  },
+
+  "footer": [
+    {
+      "name": "softryzen",
+      "path": "https://www.softryzen.com/",
+      "ariaLabel": "посилання на веб-сайт SoftRyzen"
+    },
+    {
+      "name": "goit",
+      "path": "https://goit.global/ua/",
+      "ariaLabel": "посилання на веб-сайт GoIT"
+    }
+  ]
 }

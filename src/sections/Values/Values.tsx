@@ -1,7 +1,7 @@
 import React from 'react';
 import myValues from '@/data/myValues.json';
-import { Value } from '@/components/common/MyValues/types';
-import { ValueItem } from '@/components/common/MyValues/ValueItem';
+import { ValueProps } from '@/components/common/ValueItem/types';
+import { ValueItem } from '@/components/common/ValueItem/ValueItem';
 
 export const Values: React.FC = () => {
   return (
@@ -11,11 +11,11 @@ export const Values: React.FC = () => {
           <h2 className="section-title mb-10  font-tenor text-accent md:mb-12 xl:mb-[60px] ">
             {myValues.title}
           </h2>
-          <div className="grid grid-cols-1 gap-8 xl:grid-cols-3 ">
-            {myValues.values.map((value: Value) => (
+          <ul className="grid grid-cols-1 gap-8 xl:grid-cols-3 ">
+            {myValues.values.map((value: ValueProps) => (
               <ValueItem key={value.id} value={value} />
             ))}
-          </div>
+          </ul>
         </div>
       </div>
     </section>

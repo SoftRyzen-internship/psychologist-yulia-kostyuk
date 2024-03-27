@@ -34,6 +34,8 @@ const config: Config = {
       },
       content: {
         arrow: `url(/icons/arrow-right.svg)`,
+        rocksDesk: `image-set(url('/images/desktop/hero-2-desk.webp') 1x, url('/images/desktop/hero-2-desk@2x.webp') 2x)`,
+        rocksTablet: `image-set(url('/images/tablet/hero-2-tab.webp') 1x, url('/images/tablet/hero-2-tab@2x.webp') 2x)`,
       },
       fontFamily: {
         montserrat: ['var(--font-montserrat)'],
@@ -49,6 +51,7 @@ const config: Config = {
         mainBcg: '#E5E1D5',
         footerBcg: '#D6D0C5',
         cardBcg: '#FAF5ED',
+        bgQuestions: '#6A7A5F',
         accent: '#395734',
         text: '#292929',
         error: '#CB3D3D',
@@ -58,6 +61,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [require('@tailwindcss/typography'), require('tailwind-scrollbar')],
 };
 export default config;
