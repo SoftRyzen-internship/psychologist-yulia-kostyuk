@@ -1,28 +1,43 @@
 .section_hero {
-  background-image: url('/images/mobile/hero-2-mob@2x.webp');
+  background-image: url('/images/tablet/hero-2-tab.webp');
   background-repeat: no-repeat;
   background-position: bottom;
-  background-size: 100% 248px;
+  background-size: 480px auto;
   padding-top: 78px;
   padding-bottom: 278px;
+}
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (-moz-min-device-pixel-ratio: 2),
+  screen and (-o-min-device-pixel-ratio: 2/1),
+  screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .section_hero {
+    background-image: url('/images/tablet/hero-2-tab@2x.webp');
+  }
 }
 
 @media screen and (min-width: 480px) {
   .section_hero {
-    background-image: url('/images/tablet/hero-2-tab@2x.webp');
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: 100% 350px;
+    background-image: url('/images/desktop/hero-2-desk.webp');
+    background-size: auto 350px;
     padding-bottom: 380px;
+  }
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (-moz-min-device-pixel-ratio: 2),
+    screen and (-o-min-device-pixel-ratio: 2/1),
+    screen and (-webkit-min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .section_hero {
+      background-image: url('/images/desktop/hero-2-desk@2x.webp');
+    }
   }
 }
 
 @media screen and (min-width: 768px) {
   .section_hero {
-    background-image: url('/images/tablet/hero-2-tab@2x.webp');
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: 100% 480px;
+    background-size: auto 480px;
     padding-bottom: 515px;
   }
 }
@@ -30,14 +45,10 @@
 @media screen and (min-width: 1280px) {
   .section_hero {
     position: relative;
-    background-image: url('/images/desktop/hero-2-desk@2x.webp');
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: 100% 440px;
+    background-size: auto 440px;
     padding-bottom: 500px;
     max-width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
   }
 
   .section_hero::before {
