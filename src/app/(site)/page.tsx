@@ -15,7 +15,7 @@ import { Preloader } from '@/components/ui/Preloader';
 export default function Home() {
   return (
     <>
-      <Preloader />
+      {/* <Preloader /> */}
       <Hero />
       <About />
       <Questions />

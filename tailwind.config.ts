@@ -34,6 +34,8 @@ const config: Config = {
       },
       content: {
         arrow: `url(/icons/arrow-right.svg)`,
+        rocksDesk: `image-set(url('/images/desktop/hero-2-desk.webp') 1x, url('/images/desktop/hero-2-desk@2x.webp') 2x)`,
+        rocksTablet: `image-set(url('/images/tablet/hero-2-tab.webp') 1x, url('/images/tablet/hero-2-tab@2x.webp') 2x)`,
       },
       fontFamily: {
         montserrat: ['var(--font-montserrat)'],
