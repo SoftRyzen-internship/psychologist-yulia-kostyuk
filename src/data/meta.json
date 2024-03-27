@@ -20,7 +20,7 @@
   "manifest": "/meta/site.webmanifest",
   "openGraph": {
     "type": "website",
-    "url": "`{process.env.NEXT_PUBLIC_URL}`",
+    "url": "http://localhost:3000/",
     "title": "Юлія Костюк",
     "description": "Звертайтесь до нас для глибинного розуміння себе та вирішення особистих питань. Отримайте практичні поради та підтримку в своєму розвитку та самопізнанні.",
     "siteName": "Юлія Костюк",

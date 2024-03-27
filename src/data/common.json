@@ -58,5 +58,18 @@
     },
     "description": "Моя мета — допомогти вам у розвитку та підтримати в усіх аспектах особистісного зростання.",
     "ariaLabel": "кнопка перегортання вправо на наступний слайд"
-  }
+  },
+
+  "footer": [
+    {
+      "name": "softryzen",
+      "path": "https://www.softryzen.com/",
+      "ariaLabel": "посилання на веб-сайт SoftRyzen"
+    },
+    {
+      "name": "goit",
+      "path": "https://goit.global/ua/",
+      "ariaLabel": "посилання на веб-сайт GoIT"
+    }
+  ]
 }

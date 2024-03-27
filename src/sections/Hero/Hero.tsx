@@ -31,7 +31,7 @@ export const Hero = () => {
     <section
       className={`relative w-full pb-[78px] pt-[78px] md:pb-[122px] md:pt-[122px] xl:relative xl:pb-[262px] xl:pt-[234px] ${styles.section_hero}`}
     >
-      <div className="container">
+      <div className="container xl:pt-[110px]">
         <p className="text mb-4 font-montserrat font-medium uppercase not-italic text-text">
           {hero.pretitle}
         </p>
@@ -65,7 +65,7 @@ export const Hero = () => {
       )}
       <ArrowDown
         aria-label={hero.ariaLabelIcon}
-        className="ml-auto mr-auto h-[36px] w-[36px] md:h-[44px] md:w-[44px] xl:mt-[475px] xl:h-[52px] xl:w-[52px]"
+        className="ml-auto mr-auto h-[36px] w-[36px] md:h-[44px] md:w-[44px] xl:mt-[365px] xl:h-[52px] xl:w-[52px]"
       />
     </section>
   );
