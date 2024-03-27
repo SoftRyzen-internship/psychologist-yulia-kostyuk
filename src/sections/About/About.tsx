@@ -10,9 +10,9 @@ export const About = () => {
         <div className="flex flex-col md:flex-row mdOnly:gap-8">
           <div className="mr-0 block h-[360px] self-stretch overflow-hidden md:h-full md:w-[240px] xl:mr-[136px] xl:w-[488px] smOnly:mb-10">
             <Image
-              className="w-full object-cover object-center md:h-[552px] md:object-left xl:h-[648px]"
+              className="w-auto object-cover object-center md:h-[552px] md:object-left xl:h-[648px]"
               src={about.image}
-              width={360}
+              width={480}
               height={648}
               alt={about.alt}
             />

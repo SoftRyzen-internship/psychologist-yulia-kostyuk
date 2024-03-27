@@ -60,7 +60,8 @@ export const Hero = () => {
           src={hero.src2}
           width={600}
           height={900}
-          alt="alt"
+          priority
+          alt={hero.altPhoto}
         />
       )}
       <ArrowDown
