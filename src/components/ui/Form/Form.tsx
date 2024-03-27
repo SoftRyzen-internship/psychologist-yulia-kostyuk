@@ -31,18 +31,17 @@ export const Form = () => {
 
   return (
     <form
-      className=" flex flex-col px-5 py-10 md:px-8 md:py-12 xl:w-[592px]"
+      className="container flex flex-col xl:w-[592px]"
       onSubmit={handleSubmit(onSubmit)}
     >
       {contacts.inputs.map(item => (
-        <div key={item.name.label}>
-          <FormInput
-            textarea={item.name.textarea}
-            config={item.name}
-            register={register}
-            errors={errors}
-          />
-        </div>
+        <FormInput
+          key={item.name.label}
+          textarea={item.name.textarea}
+          config={item.name}
+          register={register}
+          errors={errors}
+        />
       ))}
       <CheckBox register={register} errors={errors} />
       <Button
