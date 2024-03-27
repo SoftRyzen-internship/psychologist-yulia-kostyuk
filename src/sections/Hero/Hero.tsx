@@ -48,17 +48,16 @@ export const Hero = () => {
       </div>
       {isTablet ? (
         <Image
-          className="mb-6 mt-[78px] aspect-video w-full object-cover object-top md:mb-10 md:mt-[122px] md:h-[480px]"
-          src="/images/tablet/hero-1-tab@2x.webp"
-          width={768}
-          height={480}
-          priority
-          alt={hero.altPhoto}
+          className="mb-6 mt-[78px] h-[268px] w-full object-cover object-top sm:h-[480px] md:mb-10 md:mt-[122px]"
+          src={hero.src1}
+          width={100}
+          height={100}
+          alt="alt"
         />
       ) : (
         <Image
-          className="absolute right-0 top-[-11%] mt-[78px] h-[900px] w-auto object-cover"
-          src="/images/desktop/hero-1-desk@2x.webp"
+          className="absolute right-0 top-[-11%] mt-[78px] h-[900px] w-[45%] object-cover"
+          src={hero.src2}
           width={600}
           height={900}
           priority
