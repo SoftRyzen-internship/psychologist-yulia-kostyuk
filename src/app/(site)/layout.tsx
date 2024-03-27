@@ -22,41 +22,45 @@ const tenor = Tenor_Sans({
 
 // export const metadata: Metadata = meta;
 
-const NEXT_PUBLIC_URL = process.env.NEXT_PUBLIC_URL
+const NEXT_PUBLIC_URL = process.env.NEXT_PUBLIC_URL;
 
 export const metadata: Metadata = {
   title: 'Юлія Костюк – практикуючий психолог.',
-  description: "Звертайтесь до нас для глибинного розуміння себе та вирішення особистих питань. Отримайте практичні поради та підтримку в своєму розвитку та самопізнанні.",
+  description:
+    'Звертайтесь до нас для глибинного розуміння себе та вирішення особистих питань. Отримайте практичні поради та підтримку в своєму розвитку та самопізнанні.',
   icons: [
     {
-      url: "/meta/favicon.ico"
+      url: '/meta/favicon.ico',
     },
     {
-      url: "/meta/favicon-16x16.png",
-      rel: "icon",
-      type: "image/png"
+      url: '/meta/favicon-16x16.png',
+      rel: 'icon',
+      type: 'image/png',
     },
     {
-      url: "/meta/favicon-32x32.png",
-      rel: "icon",
-      type: "image/png"
-    }
+      url: '/meta/favicon-32x32.png',
+      rel: 'icon',
+      type: 'image/png',
+    },
   ],
-  manifest: "/meta/site.webmanifest",
+  manifest: '/meta/site.webmanifest',
   openGraph: {
     type: 'website',
     url: NEXT_PUBLIC_URL,
     title: 'Юлія Костюк',
-    description: 'Звертайтесь до нас для глибинного розуміння себе та вирішення особистих питань. Отримайте практичні поради та підтримку в своєму розвитку та самопізнанні.',
+    description:
+      'Звертайтесь до нас для глибинного розуміння себе та вирішення особистих питань. Отримайте практичні поради та підтримку в своєму розвитку та самопізнанні.',
     siteName: 'Юлія Костюк',
-    images: [{
-      url: '/meta/ogpImage.png',
-      width: 1200,
-      height: 630,
-      alt: 'Юлія Костюк - практикуючий психолог'
-    }],
+    images: [
+      {
+        url: '/meta/ogpImage.png',
+        width: 1200,
+        height: 630,
+        alt: 'Юлія Костюк - практикуючий психолог',
+      },
+    ],
   },
-}
+};
 
 export default function RootLayout({
   children,
