@@ -11,4 +11,3 @@ export const ServiceItem: React.FC<ServiceCardProps> = ({ card }) => {
     </li>
   );
 };
-
