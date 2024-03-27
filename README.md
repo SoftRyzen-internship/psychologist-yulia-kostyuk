@@ -185,6 +185,15 @@ the NavbarLink is clicked.
 | `children`  | --      | optional, `React.ReactNode`, React components                 |
 | `className` | --      | optional, `string`, adds custom css class to the Modal        |
 
+- #### component FooterItem
+
+| Prop   | Default | Description                                               |
+| ------ | ------- | --------------------------------------------------------- |
+| `name` | --      | required, `string`, specifies the name of the FooterItem. |
+
+| | `href` | -- | optional, `string`, specifies the URL of the link. | | `ariaL`
+| -- | optional, `string`, adds custom aria-label to the FooterItem |
+
 - #### component FormInput
 
 | Prop        | Default | Description                                                                       |

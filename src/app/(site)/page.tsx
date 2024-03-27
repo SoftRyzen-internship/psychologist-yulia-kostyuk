@@ -7,27 +7,26 @@ import { About } from '@/sections/About';
 import { Preloader } from '@/components/ui/Preloader';
 import { Form } from '@/components/ui/Form';
 
-import {
-  ModalTestComponent,
-  ModalTestERRORComponent,
-  ModalTestSUCCESSComponent,
-  ModalTestCONDITIONSComponents,
-} from '@/components/ui/Modal';
+// import {
+//   ModalTestComponent,
+//   ModalTestERRORComponent,
+//   ModalTestSUCCESSComponent,
+// } from '@/components/ui/Modal';
 
 export default function Home() {
   return (
     <>
-      <Preloader />
+      {/* <Preloader /> */}
       <Hero />
       <About />
       <Questions />
       <Values />
       <Services />
       <Education />
-      <ModalTestComponent />
+      {/* <ModalTestComponent />
       <ModalTestERRORComponent />
-      <ModalTestSUCCESSComponent />
-      <ModalTestCONDITIONSComponents />
+      <ModalTestSUCCESSComponent /> */}
+
       <Form />
     </>
   );
