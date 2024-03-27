@@ -49,15 +49,15 @@ export const Hero = () => {
       {isTablet ? (
         <Image
           className="mb-6 mt-[78px] h-[268px] w-full object-cover object-top sm:h-[480px] md:mb-10 md:mt-[122px]"
-          src="/images/tablet/hero-1-tab@2x.webp"
-          width={480}
-          height={268}
+          src={hero.src1}
+          width={100}
+          height={100}
           alt="alt"
         />
       ) : (
         <Image
           className="absolute right-0 top-[-11%] mt-[78px] h-[900px] w-[45%] object-cover"
-          src="/images/desktop/hero-1-desk@2x.webp"
+          src={hero.src2}
           width={600}
           height={900}
           alt="alt"
