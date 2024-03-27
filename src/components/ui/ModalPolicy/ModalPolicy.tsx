@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react';
 import { Modal } from '@/components/ui/Modal';
 import { Conditions } from '@/components/common/Conditions';
 
-export const ModalTestCONDITIONSComponents = () => {
+export const ModalPolicy = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   useEffect(() => {
@@ -31,7 +31,7 @@ export const ModalTestCONDITIONSComponents = () => {
       <button
         type="button"
         onClick={onClickOpenModal}
-        className="text duration-250 block transform font-montserrat transition hover:scale-110"
+        className="text block text-start font-montserrat transition hover:text-accent smOnly:mb-3"
       >
         Політика конфіденційності
       </button>
