@@ -24,6 +24,7 @@
     "v2": "Мої сертифікати",
     "v3": "Відправити"
   },
+  "btnContactsHref": "#contacts",
 
   "socials": [
     {
@@ -65,6 +66,8 @@
   },
 
   "footerLabelPolicy": "Політика конфіденційності",
+  "target": "_blank",
+  "rel": "noopener noreferrer nofollow",
   "footer": [
     {
       "name": "softryzen",

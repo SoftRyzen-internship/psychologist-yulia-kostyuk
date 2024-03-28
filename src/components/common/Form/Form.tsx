@@ -8,6 +8,8 @@ import { sendMessage } from '@/api/telegram';
 import { FormInput } from '../../ui/FormInput/FomrInput';
 import { Button } from '../../ui/Button';
 import { CheckBox } from '../../ui/CheckBox/Checkbox';
+import { ModalError } from '@/components/ui/ModalError';
+import { ModalSuccess } from '@/components/ui/ModalSuccess';
 import { Loader } from '@/components/ui/Loader';
 
 import { FormData } from './types';
@@ -25,7 +27,9 @@ export const Form = () => {
     formState: { errors },
   } = useForm<FormData>();
 
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [showSuccessModal, setShowSuccessModal] = useState<boolean>(false);
+  const [showErrorModal, setShowErrorModal] = useState<boolean>(false);
 
   useFormPersist('FormData', {
     watch,
@@ -43,7 +47,7 @@ export const Form = () => {
       alert('ваші дані відправлено');
       reset();
     } catch {
-      alert('ваші дані НЕ відправлено');
+      setShowErrorModal(true);
     } finally {
       setIsLoading(false);
     }

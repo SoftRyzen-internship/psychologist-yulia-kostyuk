@@ -7,12 +7,6 @@ import { About } from '@/sections/About';
 import { Preloader } from '@/components/ui/Preloader';
 import { Contacts } from '@/sections/Contacts';
 
-// import {
-//   ModalTestComponent,
-//   ModalTestERRORComponent,
-//   ModalTestSUCCESSComponent,
-// } from '@/components/ui/Modal';
-
 export default function Home() {
   return (
     <>
@@ -23,10 +17,6 @@ export default function Home() {
       <Values />
       <Services />
       <Education />
-      {/* <ModalTestComponent />
-      <ModalTestERRORComponent />
-      <ModalTestSUCCESSComponent /> */}
-
       <Contacts />
     </>
   );
