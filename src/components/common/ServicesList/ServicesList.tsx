@@ -39,6 +39,7 @@ export function ServicesList() {
             <Button
               tag="a"
               accent={false}
+              href={common.btnContactsHref}
               className="flex max-w-full justify-center font-normal md:max-w-[135px] md:items-center md:justify-center xl:max-w-[147px]"
             >
               {common.buttonsText.v1}

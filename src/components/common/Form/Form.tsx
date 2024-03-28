@@ -7,6 +7,8 @@ import useFormPersist from 'react-hook-form-persist';
 import { FormInput } from '../../ui/FormInput/FomrInput';
 import { Button } from '../../ui/Button';
 import { CheckBox } from '../../ui/CheckBox/Checkbox';
+import { ModalError } from '@/components/ui/ModalError';
+import { ModalSuccess } from '@/components/ui/ModalSuccess';
 import { Loader } from '@/components/ui/Loader';
 
 import { FormData } from './types';
@@ -24,7 +26,9 @@ export const Form = () => {
     formState: { errors },
   } = useForm<FormData>();
 
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [showSuccessModal, setShowSuccessModal] = useState<boolean>(false);
+  const [showErrorModal, setShowErrorModal] = useState<boolean>(false);
 
   useFormPersist('FormData', {
     watch,
@@ -34,38 +38,41 @@ export const Form = () => {
   const onSubmit: SubmitHandler<FormData> = data => {
     try {
       setIsLoading(true);
-      console.log(data);
-      alert('ваші дані відправлено');
+      setShowSuccessModal(true);
       reset();
     } catch {
-      alert('ваші дані НЕ відправлено');
+      setShowErrorModal(true);
     } finally {
       setIsLoading(false);
     }
   };
 
   return (
-    <form
-      className="flex flex-col xl:w-[592px]"
-      onSubmit={handleSubmit(onSubmit)}
-    >
-      {contacts.inputs.map(item => (
-        <FormInput
-          key={item.name.label}
-          textarea={item.name.textarea}
-          config={item.name}
-          register={register}
-          errors={errors}
-        />
-      ))}
-      <CheckBox register={register} errors={errors} />
-      <Button
-        tag="button"
-        accent={true}
-        className="w-full px-12 md:w-[185px] smOnly:mx-auto"
+    <>
+      <form
+        className="flex flex-col xl:w-[592px]"
+        onSubmit={handleSubmit(onSubmit)}
       >
-        {!isLoading ? common.buttonsText.v3 : <Loader />}
-      </Button>
-    </form>
+        {contacts.inputs.map(item => (
+          <FormInput
+            key={item.name.label}
+            textarea={item.name.textarea}
+            config={item.name}
+            register={register}
+            errors={errors}
+          />
+        ))}
+        <CheckBox register={register} errors={errors} />
+        <Button
+          tag="button"
+          accent={true}
+          className="w-full px-12 md:w-[185px] smOnly:mx-auto"
+        >
+          {!isLoading ? common.buttonsText.v3 : <Loader />}
+        </Button>
+      </form>
+      {showSuccessModal && <ModalSuccess />}
+      {showErrorModal && <ModalError />}
+    </>
   );
 };

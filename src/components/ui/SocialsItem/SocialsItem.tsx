@@ -6,6 +6,8 @@ import Facebook from '@/../public/icons/facebook.svg';
 
 import { SocialsItemProps } from './types';
 
+import common from '@/data/common.json';
+
 export const SocialsItem: React.FC<SocialsItemProps> = ({
   name,
   href,
@@ -16,8 +18,8 @@ export const SocialsItem: React.FC<SocialsItemProps> = ({
       <a
         href={href}
         aria-label={ariaL}
-        target="_blank"
-        rel="noopener noreferrer nofollow"
+        target={common.target}
+        rel={common.rel}
         className="transition hover:text-hover focus-visible:text-pressed"
       >
         {name === 'telegram' && <Telegram className="h-8 w-8" />}
