@@ -1,10 +1,11 @@
 'use client';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { Logo } from '../Logo';
 import { Socials } from '../Socials';
 import { Navbar } from '../Navbar';
 import CloseIcon from '@/../public/icons/close-icon.svg';
 import { IBurgerMenuProps } from './types';
+import useFocusTrap from '@/utils/useFocusTrap';
 import common from '@/data/common.json';
 
 export const BurgerMenu: React.FC<IBurgerMenuProps> = ({ onClose }) => {

@@ -56,6 +56,7 @@ const config: Config = {
         hover: '#2C4228',
         pressed: '#21331F',
         border: 'rgba(57, 87, 52, 0.30)',
+        borderCheckbox: '#91897F',
       },
     },
   },

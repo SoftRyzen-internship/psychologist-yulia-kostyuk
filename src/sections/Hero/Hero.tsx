@@ -41,7 +41,8 @@ export const Hero = () => {
         <Button
           tag="a"
           accent={true}
-          className="w-full font-semibold md:w-[198px]"
+          href={hero.btnHeroHref}
+          className="w-full font-semibold focus-visible:bg-pressed md:w-[198px]"
         >
           {common.buttonsText.v1}
         </Button>

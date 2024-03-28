@@ -5,7 +5,7 @@ import { ValueItem } from '@/components/common/ValueItem/ValueItem';
 
 export const Values: React.FC = () => {
   return (
-    <section className="mp-20 w-full pb-10 md:pb-[60px] md:pt-[120px] xl:pb-20 xl:pt-40">
+    <section className="w-full pb-10 pt-20 md:pb-[60px] md:pt-[120px] xl:pb-20 xl:pt-40">
       <div className="container">
         <div>
           <h2 className="section-title mb-10  font-tenor text-accent md:mb-12 xl:mb-[60px] ">

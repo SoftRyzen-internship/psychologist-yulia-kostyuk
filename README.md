@@ -193,3 +193,27 @@ the NavbarLink is clicked.
 
 | | `href` | -- | optional, `string`, specifies the URL of the link. | | `ariaL`
 | -- | optional, `string`, adds custom aria-label to the FooterItem |
+
+- #### component FormInput
+
+| Prop        | Default | Description                                                                       |
+| ----------- | ------- | --------------------------------------------------------------------------------- |
+| `config`    | --      | required, `FormInputsConfig`, config props - name, label, placeholder, validation |
+| `textarea`  | --      | required, `boolean`, specifies if component input or textarea                     |
+| `register`  | --      | required, `UseFormRegister`, register an input element and apply validation rules |
+| `errors`    | --      | optional, `object`, contains inputs' errors data                                  |
+| `pattern`   | --      | optional, `string`, regExp for input validation                                   |
+| `minLength` | --      | optional, `number`, min valid length of input value                               |
+
+- #### component Checkbox
+
+| Prop       | Default | Description                                                                       |
+| ---------- | ------- | --------------------------------------------------------------------------------- |
+| `register` | --      | required, `UseFormRegister`, register an input element and apply validation rules |
+| `errors`   | --      | optional, `object`, contains inputs' errors data                                  |
+
+- #### component Form
+
+| Prop        | Default | Description                                              |
+| ----------- | ------- | -------------------------------------------------------- |
+| `className` | --      | optional, `string`, adds custom css class to the Socials |

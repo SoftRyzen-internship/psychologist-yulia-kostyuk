@@ -1,10 +1,9 @@
-'use client';
 import React, { useState, useEffect } from 'react';
-import { Modal } from './Modal';
+import { Modal } from '../Modal/Modal';
 import { Notification } from '@/components/ui/Notification';
 
-export function ModalTestSUCCESSComponent() {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+export const ModalSuccess = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(true);
 
   useEffect(() => {
     if (isOpen) {
@@ -17,23 +16,12 @@ export function ModalTestSUCCESSComponent() {
     };
   }, [isOpen]);
 
-  const onClickOpenModal = () => {
-    setIsOpen(true);
-  };
-
   const onClickCloseModal = () => {
     setIsOpen(false);
   };
 
   return (
     <>
-      <button
-        onClick={onClickOpenModal}
-        type="button"
-        className="block text-accent"
-      >
-        MODAL SUCCESS BUTTON
-      </button>
       {isOpen && (
         <Modal
           onClose={onClickCloseModal}
@@ -44,4 +32,4 @@ export function ModalTestSUCCESSComponent() {
       )}
     </>
   );
-}
+};

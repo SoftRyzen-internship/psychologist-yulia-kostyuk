@@ -1,0 +1,87 @@
+{
+  "contactsTitle": "Контакти",
+  "inputs": [
+    {
+      "name": {
+        "textarea": false,
+        "label": "Ваше ім'я",
+        "name": "name",
+        "placeholder": "Анастасія",
+        "validation": {
+          "required": {
+            "value": true,
+            "message": "Введіть своє ім'я"
+          },
+          "pattern": {
+            "value": "^(?!.*(?:[ -]{2,}| -| - |^[ -]|^-))[A-Za-zА-Яа-яЁёІіЇїЄєҐґ -]+$",
+            "message": "Введіть коректне ім'я"
+          },
+          "minLength": {
+            "value": 2,
+            "message": "Введіть своє ім'я"
+          },
+          "maxLength": {
+            "value": 30,
+            "message": "Максимальна довжина 30 символів"
+          }
+        }
+      }
+    },
+    {
+      "name": {
+        "textarea": false,
+        "label": "Номер телефону",
+        "name": "phone",
+        "placeholder": "+380000000000",
+        "validation": {
+          "required": {
+            "value": true,
+            "message": "Введіть свій номер телефону"
+          },
+          "pattern": {
+            "value": "[0-9]+",
+            "message": "Введіть коректний номер телефону"
+          },
+          "minLength": {
+            "value": 10,
+            "message": "Мінімальна довжина 10 символів"
+          },
+          "maxLength": {
+            "value": 13,
+            "message": "Максимальна довжина 13 символів"
+          }
+        }
+      }
+    },
+    {
+      "name": {
+        "textarea": true,
+        "label": "Коментар",
+        "name": "message",
+        "placeholder": "Напишіть, яка проблема вас турбує",
+        "validation": {
+          "required": {
+            "value": false,
+            "message": "Будь ласка, введіть свій номер телефону"
+          },
+          "pattern": {
+            "value": ".",
+            "message": ""
+          }
+        }
+      }
+    }
+  ],
+
+  "checkBox": {
+    "type": "checkbox",
+    "inputName": "checked",
+    "agreeDeclaration": "Я погоджуюся на обробку моїх персональних даних відповідно до ",
+    "conditionsLink": "Політики конфіденційності"
+  },
+
+  "location": {
+    "iconLabel": "іконка місцезнаходження",
+    "label": "м. Хмельницький"
+  }
+}

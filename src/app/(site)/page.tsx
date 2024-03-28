@@ -5,12 +5,7 @@ import { Education } from '@/sections/Education';
 import { Questions } from '@/sections/Questions';
 import { About } from '@/sections/About';
 import { Preloader } from '@/components/ui/Preloader';
-
-// import {
-//   ModalTestComponent,
-//   ModalTestERRORComponent,
-//   ModalTestSUCCESSComponent,
-// } from '@/components/ui/Modal';
+import { Contacts } from '@/sections/Contacts';
 
 export default function Home() {
   return (
@@ -22,9 +17,7 @@ export default function Home() {
       <Values />
       <Services />
       <Education />
-      {/* <ModalTestComponent />
-      <ModalTestERRORComponent />
-      <ModalTestSUCCESSComponent /> */}
+      <Contacts />
     </>
   );
 }
