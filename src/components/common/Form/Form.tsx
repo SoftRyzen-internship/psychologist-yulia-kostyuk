@@ -43,8 +43,7 @@ export const Form = () => {
       `;
       await sendMessage(message);
 
-      console.log(data);
-      alert('ваші дані відправлено');
+      setShowSuccessModal(true);
       reset();
     } catch {
       setShowErrorModal(true);
@@ -54,27 +53,31 @@ export const Form = () => {
   };
 
   return (
-    <form
-      className="flex flex-col xl:w-[592px]"
-      onSubmit={handleSubmit(onSubmit)}
-    >
-      {contacts.inputs.map(item => (
-        <FormInput
-          key={item.name.label}
-          textarea={item.name.textarea}
-          config={item.name}
-          register={register}
-          errors={errors}
-        />
-      ))}
-      <CheckBox register={register} errors={errors} />
-      <Button
-        tag="button"
-        accent={true}
-        className="w-full px-12 md:w-[198px] smOnly:mx-auto"
+    <>
+      <form
+        className="flex flex-col xl:w-[592px]"
+        onSubmit={handleSubmit(onSubmit)}
       >
-        {!isLoading ? common.buttonsText.v3 : <Loader />}
-      </Button>
-    </form>
+        {contacts.inputs.map(item => (
+          <FormInput
+            key={item.name.label}
+            textarea={item.name.textarea}
+            config={item.name}
+            register={register}
+            errors={errors}
+          />
+        ))}
+        <CheckBox register={register} errors={errors} />
+        <Button
+          tag="button"
+          accent={true}
+          className="w-full px-12 md:w-[198px] smOnly:mx-auto"
+        >
+          {!isLoading ? common.buttonsText.v3 : <Loader />}
+        </Button>
+      </form>
+      {showSuccessModal && <ModalSuccess />}
+      {showErrorModal && <ModalError />}
+    </>
   );
 };
