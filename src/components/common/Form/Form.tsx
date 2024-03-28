@@ -1,13 +1,18 @@
 'use client';
-import React from 'react';
+
+import React, { useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import useFormPersist from 'react-hook-form-persist';
+
 import { FormInput } from '../../ui/FormInput/FomrInput';
 import { Button } from '../../ui/Button';
 import { CheckBox } from '../../ui/CheckBox/Checkbox';
+import { Loader } from '@/components/ui/Loader';
+
+import { FormData } from './types';
+
 import common from '@/data/common.json';
 import contacts from '@/data/contacts.json';
-import { FormData } from './types';
 
 export const Form = () => {
   const {
@@ -19,14 +24,24 @@ export const Form = () => {
     formState: { errors },
   } = useForm<FormData>();
 
+  const [isLoading, setIsLoading] = useState(false);
+
   useFormPersist('FormData', {
     watch,
     setValue,
   });
 
   const onSubmit: SubmitHandler<FormData> = data => {
-    console.log(data);
-    reset();
+    try {
+      setIsLoading(true);
+      console.log(data);
+      alert('ваші дані відправлено');
+      reset();
+    } catch {
+      alert('ваші дані НЕ відправлено');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -47,9 +62,9 @@ export const Form = () => {
       <Button
         tag="button"
         accent={true}
-        className="w-full md:w-[185px] smOnly:mx-auto"
+        className="w-full px-12 md:w-[185px] smOnly:mx-auto"
       >
-        {common.buttonsText.v1}
+        {!isLoading ? common.buttonsText.v3 : <Loader />}
       </Button>
     </form>
   );

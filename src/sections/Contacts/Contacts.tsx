@@ -36,7 +36,7 @@ export const Contacts = () => {
                     href={item.href}
                     target={item.target}
                     rel={item.rel}
-                    className="text flex items-center gap-2 font-montserrat font-normal not-italic text-text transition hover:text-accent"
+                    className="text flex items-center gap-2 font-montserrat font-normal not-italic text-text transition hover:text-accent focus-visible:text-pressed"
                   >
                     {item.name === 'phone' && (
                       <IconPhone width={20} height={20} />
