@@ -22,7 +22,7 @@ export const Footer: React.FC<FooterItemProps> = () => {
           />
           <div className="flex flex-col items-center md:flex-row-reverse md:justify-between xl:flex-row mdOnly:before:absolute mdOnly:before:left-0 mdOnly:before:top-[74px] mdOnly:before:h-[1px] mdOnly:before:w-full mdOnly:before:bg-accent/80 mdOnly:before:content-['']">
             <ModalPolicy variant="footer" nameBtn={data.footerLabelPolicy} />
-            <div className="border-borderCheckbox/40 flex items-center gap-3 xl:ml-6 xl:border-l-[1px] xl:border-solid xl:pl-6 xl:pt-0">
+            <div className="flex items-center gap-3 border-borderCheckbox/40 xl:ml-6 xl:border-l-[1px] xl:border-solid xl:pl-6 xl:pt-0">
               <p className="text font-montserrat">{data.layout.footer.web}</p>
               <ul className="flex items-center gap-3 xl:gap-6">
                 {footer.map(item => (
