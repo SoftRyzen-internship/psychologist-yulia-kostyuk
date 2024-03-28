@@ -2,9 +2,9 @@
 import React from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import useFormPersist from 'react-hook-form-persist';
-import { FormInput } from './FomrInput';
-import { Button } from '../Button';
-import { CheckBox } from './Checkbox';
+import { FormInput } from '../../ui/FormInput/FomrInput';
+import { Button } from '../../ui/Button';
+import { CheckBox } from '../../ui/CheckBox/Checkbox';
 import common from '@/data/common.json';
 import contacts from '@/data/contacts.json';
 import { FormData } from './types';
@@ -31,7 +31,7 @@ export const Form = () => {
 
   return (
     <form
-      className="container flex flex-col xl:w-[592px]"
+      className="flex flex-col xl:w-[592px]"
       onSubmit={handleSubmit(onSubmit)}
     >
       {contacts.inputs.map(item => (

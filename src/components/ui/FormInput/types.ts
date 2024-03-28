@@ -11,6 +11,7 @@ export type FormInputProps = {
   errors?: FieldErrors<FormData>;
   pattern?: ValidationRule<RegExp>;
   minLength?: ValidationRule<number>;
+  maxLength?: ValidationRule<number>;
 };
 
 export type FormInputsConfig = {
@@ -23,7 +24,8 @@ export type FormInputsConfig = {
 export type validationInput = {
   required?: validationRequired;
   pattern?: validationPattern;
-  minLength?: validationLength; //--
+  minLength?: validationLength;
+  maxLength?: validationLength;
 };
 
 export type validationRequired = {
@@ -39,9 +41,4 @@ export type validationPattern = {
 export type validationLength = {
   value: number;
   message: string;
-};
-
-export type CheckBoxProps = {
-  register: UseFormRegister<FormData>;
-  errors?: FieldErrors<FormData>;
 };

@@ -16,9 +16,7 @@ export const FormInput: React.FC<FormInputProps> = ({
     <>
       <label
         htmlFor={name}
-        className={classnames(
-          'text mb-2 font-montserrat font-normal not-italic text-text',
-        )}
+        className="text mb-2 font-montserrat font-normal not-italic text-text"
       >
         {label} {isRequired?.value && '*'}
       </label>
@@ -36,19 +34,28 @@ export const FormInput: React.FC<FormInputProps> = ({
               message: validation?.pattern ? validation?.pattern?.message : '',
             },
           })}
-          className="text mb-3 h-24 resize-none bg-cardBcg px-4 py-3 font-montserrat font-normal not-italic text-text outline-none placeholder:opacity-[0.4]"
+          className="text mb-3 h-24 resize-none bg-cardBcg px-4 py-3 font-montserrat font-normal not-italic text-text outline-none placeholder:opacity-[0.4] md:mb-4"
         />
       ) : (
         <input
           aria-required="true"
           aria-invalid={isError ? 'true' : 'false'}
           aria-describedby={isError ? 'errorName' : undefined}
+          id={name}
           {...register(name, {
             ...validation,
             required: isRequired,
             minLength: {
               value: validation?.minLength ? validation?.minLength?.value : 13,
-              message: validation?.pattern ? validation?.pattern?.message : '',
+              message: validation?.minLength
+                ? validation?.minLength?.message
+                : '',
+            },
+            maxLength: {
+              value: validation?.maxLength ? validation?.maxLength?.value : 13,
+              message: validation?.maxLength
+                ? validation?.maxLength?.message
+                : '',
             },
             pattern: {
               value: validation?.pattern
@@ -58,11 +65,11 @@ export const FormInput: React.FC<FormInputProps> = ({
             },
           })}
           placeholder={placeholder}
-          className="text bg-cardBcg px-4 py-3 font-montserrat font-normal not-italic text-text outline-none placeholder:opacity-[0.4]"
-          style={{
-            color: errors?.checked ? '#CB3D3D' : '#292929',
-            marginBottom: isError ? '0px' : '32px',
-          }}
+          className={classnames(
+            'text bg-cardBcg px-4 py-3 font-montserrat font-normal not-italic outline-none placeholder:opacity-[0.4]',
+            isError ? 'text-error' : 'text-text',
+            isError ? 'mb-0' : 'mb-8',
+          )}
         />
       )}
       {isError && (

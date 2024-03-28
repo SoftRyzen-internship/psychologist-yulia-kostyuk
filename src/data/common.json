@@ -63,6 +63,7 @@
     "ariaLabel": "кнопка перегортання вправо на наступний слайд"
   },
 
+  "footerLabelPolicy": "Політика конфіденційності",
   "footer": [
     {
       "name": "softryzen",

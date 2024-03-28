@@ -5,7 +5,7 @@ import { Education } from '@/sections/Education';
 import { Questions } from '@/sections/Questions';
 import { About } from '@/sections/About';
 import { Preloader } from '@/components/ui/Preloader';
-import { Form } from '@/components/ui/Form';
+import { Contacts } from '@/sections/Contacts';
 
 // import {
 //   ModalTestComponent,
@@ -27,7 +27,7 @@ export default function Home() {
       <ModalTestERRORComponent />
       <ModalTestSUCCESSComponent /> */}
 
-      <Form />
+      <Contacts />
     </>
   );
 }
