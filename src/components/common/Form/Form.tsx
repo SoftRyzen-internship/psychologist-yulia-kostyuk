@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import useFormPersist from 'react-hook-form-persist';
+import { sendMessage } from '@/api/telegram';
 
 import { FormInput } from '../../ui/FormInput/FomrInput';
 import { Button } from '../../ui/Button';
@@ -31,9 +32,13 @@ export const Form = () => {
     setValue,
   });
 
-  const onSubmit: SubmitHandler<FormData> = data => {
+  const onSubmit: SubmitHandler<FormData> = async data => {
     try {
       setIsLoading(true);
+      const message = `Ім'я: ${data.name} %0AТелефон: ${data.phone} %0A${data.message ? `Повідомлення: ${data.message}` : ''}
+      `;
+      await sendMessage(message);
+
       console.log(data);
       alert('ваші дані відправлено');
       reset();
@@ -62,7 +67,7 @@ export const Form = () => {
       <Button
         tag="button"
         accent={true}
-        className="w-full px-12 md:w-[185px] smOnly:mx-auto"
+        className="w-full px-12 md:w-[198px] smOnly:mx-auto"
       >
         {!isLoading ? common.buttonsText.v3 : <Loader />}
       </Button>
