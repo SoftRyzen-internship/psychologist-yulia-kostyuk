@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import useFormPersist from 'react-hook-form-persist';
+import { sendMessage } from '@/api/telegram';
 
 import { FormInput } from '../../ui/FormInput/FomrInput';
 import { Button } from '../../ui/Button';
@@ -35,10 +36,15 @@ export const Form = () => {
     setValue,
   });
 
-  const onSubmit: SubmitHandler<FormData> = data => {
+  const onSubmit: SubmitHandler<FormData> = async data => {
     try {
       setIsLoading(true);
-      setShowSuccessModal(true);
+      const message = `Ім'я: ${data.name} %0AТелефон: ${data.phone} %0A${data.message ? `Повідомлення: ${data.message}` : ''}
+      `;
+      await sendMessage(message);
+
+      console.log(data);
+      alert('ваші дані відправлено');
       reset();
     } catch {
       setShowErrorModal(true);
@@ -48,31 +54,27 @@ export const Form = () => {
   };
 
   return (
-    <>
-      <form
-        className="flex flex-col xl:w-[592px]"
-        onSubmit={handleSubmit(onSubmit)}
+    <form
+      className="flex flex-col xl:w-[592px]"
+      onSubmit={handleSubmit(onSubmit)}
+    >
+      {contacts.inputs.map(item => (
+        <FormInput
+          key={item.name.label}
+          textarea={item.name.textarea}
+          config={item.name}
+          register={register}
+          errors={errors}
+        />
+      ))}
+      <CheckBox register={register} errors={errors} />
+      <Button
+        tag="button"
+        accent={true}
+        className="w-full px-12 md:w-[198px] smOnly:mx-auto"
       >
-        {contacts.inputs.map(item => (
-          <FormInput
-            key={item.name.label}
-            textarea={item.name.textarea}
-            config={item.name}
-            register={register}
-            errors={errors}
-          />
-        ))}
-        <CheckBox register={register} errors={errors} />
-        <Button
-          tag="button"
-          accent={true}
-          className="w-full px-12 md:w-[185px] smOnly:mx-auto"
-        >
-          {!isLoading ? common.buttonsText.v3 : <Loader />}
-        </Button>
-      </form>
-      {showSuccessModal && <ModalSuccess />}
-      {showErrorModal && <ModalError />}
-    </>
+        {!isLoading ? common.buttonsText.v3 : <Loader />}
+      </Button>
+    </form>
   );
 };
